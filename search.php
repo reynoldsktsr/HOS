@@ -16,21 +16,6 @@
 	get_header(); 
 ?>	
 
-<section class="blog-header-container">
-	<div class="container">
-		<!-- blog header -->
-		<div class="row">
-		    <div class="col-md-12 blog-classic-top">
-		        <h2><?php printf( __( 'Search Results for: %s', 'twentyfourteen' ), get_search_query() ); ?></h2>
-		        <form id="search-bar" action="<?php echo home_url() ?>">
-		            <i class="fa fa-search"></i>
-		            <input type="text" name="s" placeholder="<?php _e("Search at blog",ET_DOMAIN) ?>">
-		        </form>
-		    </div>
-		</div>      
-		<!--// blog header  -->	
-	</div>
-</section>
 
 <div class="container">
 	<!-- block control  -->

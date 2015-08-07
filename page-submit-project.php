@@ -6,19 +6,7 @@ global $user_ID;
 get_header();
 ?>
 
-<!-- Breadcrumb Blog -->
-<section class="blog-header-container">
-    <div class="container">
-        <!-- blog header -->
-        <div class="row">
-            <div class="col-md-12 blog-classic-top">
-                <h2><?php the_title(); ?></h2>
-            </div>
-        </div>      
-        <!--// blog header  --> 
-    </div>
-</section>
-<!-- Breadcrumb Blog / End -->
+
 
 <!-- Page Post Place -->
 <section id="blog-page">
