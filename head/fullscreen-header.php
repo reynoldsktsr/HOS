@@ -11,7 +11,7 @@
 	<div class="top-header">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-xs-4">
+                <div class="col-md-2 col-xs-4">
                     <?php if(is_page_template('page-home.php')) { ?>
                         <a href="<?php echo home_url(); ?>" class="logo site_logo_white"><?php fre_logo('site_logo_white') ?></a>
                         <a href="<?php echo home_url(); ?>" class="logo site_logo_black"><?php fre_logo('site_logo_black') ?></a>
@@ -19,15 +19,16 @@
                         <a href="<?php echo home_url(); ?>" class="logo"><?php fre_logo('site_logo_black') ?></a>
                     <?php } ?>
                 </div>
-                <div class="col-md-4 col-xs-4">
-                    <ul class="btn-menu-call">
+                <div class="col-md-8 col-xs-4">
+                    <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain','after'=>'&nbsp; |&nbsp;'));?>
+                    <!-- <ul class="btn-menu-call">
                         <?php if(has_nav_menu('et_header')) { // dont render button menu if dont have menu ?>
                         <li><a href="javascript:void(0);" class="trigger-overlay trigger-menu"><i class="fa fa-bars"></i><span><?php _e("MENU", ET_DOMAIN); ?></span></a></li>
                         <?php } ?>
                         <li><a href="javascript:void(0);" class="trigger-overlay trigger-search"><i class="fa fa-search"></i><span><?php _e("SEARCH", ET_DOMAIN); ?></span></a></li>
-                    </ul>
+                    </ul> -->
                 </div>
-                <div class="col-md-4 col-xs-4">
+                <div class="col-md-2 col-xs-4">
                 	<div class="login-form-header-wrapper">
 						<?php if(!is_user_logged_in()){ ?>
                         <div class="non-login">

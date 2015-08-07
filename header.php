@@ -33,6 +33,7 @@ global $current_user;
         et_render_less_style();
     }
     ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri());?>/css/style-hos.css">
 </head>
 
 <body <?php body_class(); ?>>
