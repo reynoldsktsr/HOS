@@ -4,10 +4,8 @@
  */
 get_header();?>
 
-<div class="container page-container">
-	<div>
+<div class="page-container">
 	<?php the_content();?>
-	</div>
 </div>
 
 
