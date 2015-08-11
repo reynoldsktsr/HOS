@@ -12,12 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-xs-4">
-                    <?php if(is_page_template('page-home.php')) { ?>
-                        <a href="<?php echo home_url(); ?>" class="logo site_logo_white"><?php fre_logo('site_logo_white') ?></a>
-                        <a href="<?php echo home_url(); ?>" class="logo site_logo_black"><?php fre_logo('site_logo_black') ?></a>
-                    <?php }else { ?>
-                        <a href="<?php echo home_url(); ?>" class="logo"><?php fre_logo('site_logo_black') ?></a>
-                    <?php } ?>
+                    <a href="<?php echo home_url(); ?>" class="logo"><?php fre_logo('site_logo_black') ?></a>
                 </div>
                 <div class="col-md-8 col-xs-4">
                     <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain','after'=>'&nbsp; |&nbsp;'));?>

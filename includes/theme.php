@@ -52,7 +52,7 @@ if (!function_exists('fre_logo')) {
         }
         switch ($option_name) {
             case 'site_logo_black':
-                $img = get_template_directory_uri() . "/img/logo-fre-black.png";
+                $img = get_template_directory_uri() . "/img/hiredOn_Logo.png";
                 break;
 
             case 'site_logo_white':

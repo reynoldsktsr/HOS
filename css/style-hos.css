@@ -1,13 +1,17 @@
+.top-header, .sticky .top-header { padding: 0;}
+	.top-header .logo { margin: 0;}
+
 .container #menuBar li {
 	display: inline-block;
 }
 .main_section{ height: 100vh;}
 	.main_section.adaptiveHeight {height: 100%;}
+	.main_section .right_float { float: right;}
 
 h1.header { width: 50%; min-width: 500px; text-align: center;}
-	#home_header_1, #home_header_3 { position: absolute;left: 40%;top: 40%;}
+	#home_header_1, #home_header_3 { left: 40%;top: 40%;}
 	#home_header_2 { width: 100%;}
 
-div#homePage_section_1_buttons { position: absolute; width: 50%; min-width: 500px; left: 50%; top: 60%;}
+div#homePage_section_1_buttons { width: 50%; min-width: 500px; left: 50%; top: 60%;}
 	#homePage_section_1_buttons > br { display: none;}
 	#homePage_section_1_buttons > button:first-of-type { margin-right: 20%;}
