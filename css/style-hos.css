@@ -1,17 +1,30 @@
 .top-header, .sticky .top-header { padding: 0;}
 	.top-header .logo { margin: 0;}
+	.top-header #menuContain { height: 90px; position: relative;}
+	.top-header #menuBar { position: absolute;top: 50%; transform: translateY(-50%);}
+		.top-header #menuBar li { display: inline-block; margin-right: 15px; padding: 5px 10px; border-radius: 3px;}
+		.top-header #menuBar li.active { background: #00afff;}
+			.top-header #menuBar li.active a { color: #ffffff;}
+	.top-header .login-form-header-wrapper { position: relative; height: 90px; margin: 0;}
+		.top-header .dropdown-info-acc-wrapper { position: relative; top: 50%; transform: translateY(-50%);}
 
-.container #menuBar li {
-	display: inline-block;
-}
 .main_section{ height: 100vh;}
 	.main_section.adaptiveHeight {height: 100%;}
 	.main_section .right_float { float: right;}
 
 h1.header { width: 50%; min-width: 500px; text-align: center;}
 	#home_header_1, #home_header_3 { left: 40%;top: 40%;}
-	#home_header_2 { width: 100%;}
+	#home_header_2, #home_header_4 { width: 100%;}
 
 div#homePage_section_1_buttons { width: 50%; min-width: 500px; left: 50%; top: 60%;}
 	#homePage_section_1_buttons > br { display: none;}
 	#homePage_section_1_buttons > button:first-of-type { margin-right: 20%;}
+
+div#homePage_section_2 > div { float: none; display: inline-block; width: 33%;}
+	div#homePage_section_2 > div h3 { text-align: center; height: 52px;}
+
+div#homePage_section_3 { }
+
+div#homePage_section_4 { }
+	div#homePage_section_4 > div { float: none; display: inline-block; width: 24%;}
+	div#homePage_section_4 > div:first-of-type { margin-left: 2%;}

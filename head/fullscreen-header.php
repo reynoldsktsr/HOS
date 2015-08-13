@@ -15,7 +15,7 @@
                     <a href="<?php echo home_url(); ?>" class="logo"><?php fre_logo('site_logo_black') ?></a>
                 </div>
                 <div class="col-md-8 col-xs-4">
-                    <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain','after'=>'&nbsp; |&nbsp;'));?>
+                    <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain'));?>
                     <!-- <ul class="btn-menu-call">
                         <?php if(has_nav_menu('et_header')) { // dont render button menu if dont have menu ?>
                         <li><a href="javascript:void(0);" class="trigger-overlay trigger-menu"><i class="fa fa-bars"></i><span><?php _e("MENU", ET_DOMAIN); ?></span></a></li>
