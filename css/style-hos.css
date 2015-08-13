@@ -7,7 +7,7 @@
 		.top-header #menuBar li.active { background: #00afff;}
 			.top-header #menuBar li.active a { color: #ffffff;}
 	.top-header .login-form-header-wrapper { position: relative; height: 90px; margin: 0;}
-		.top-header .dropdown-info-acc-wrapper { position: relative; top: 50%; transform: translateY(-50%);}
+		.top-header .dropdown-info-acc-wrapper, .top-header .non-login { position: relative; top: 50%; transform: translateY(-50%);}
 
 .main_section{ height: 100vh;}
 	.main_section.adaptiveHeight {height: 100%;}
