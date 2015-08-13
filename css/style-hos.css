@@ -29,3 +29,6 @@ div#homePage_section_3 { }
 div#homePage_section_4 { }
 	div#homePage_section_4 > div { float: none; display: inline-block; width: 24%;}
 	div#homePage_section_4 > div:first-of-type { margin-left: 2%;}
+
+.copyright-wrapper { background: #ffffff; padding-top: 10px; padding-bottom: 10px;}
+	.copyright-wrapper img { max-height: 90px;}

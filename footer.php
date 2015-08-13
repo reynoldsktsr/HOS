@@ -37,7 +37,7 @@ if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' 
 <?php }else{ $flag = false;} ?>
 <div class="copyright-wrapper <?php if(!$flag){ echo 'copyright-wrapper-margin-top'; } ?> ">
 <?php
-    $copyright = ae_get_option('copyright');
+    $copyright = 'Copyright Hired On';
     $has_nav_menu = has_nav_menu( 'et_footer' );
     $col = 'col-md-6  col-sm-6';
     if($has_nav_menu) {
@@ -47,15 +47,8 @@ if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' 
 	<div class="container">
         <div class="row">
             <div class="<?php echo $col ?> ">
-            	<a href="<?php echo home_url(); ?>" class="logo-footer"><?php fre_logo('site_logo_white') ?></a>
+            	<a href="<?php echo home_url(); ?>" class="logo-footer"><?php fre_logo('site_logo_black') ?></a>
             </div>
-            <?php if($has_nav_menu){ ?>
-            <div class="col-md-4  col-sm-4">
-                <?php
-                    wp_nav_menu( array('theme_location' =>'et_footer') );
-                ?>
-            </div>
-            <?php }?>
             <div class="<?php echo $col;?> ">
             	<p class="text-copyright">
                     <?php
