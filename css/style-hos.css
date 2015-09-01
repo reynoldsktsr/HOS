@@ -28,7 +28,7 @@ div#homePage_section_1_buttons { width: 50%; min-width: 500px; left: 50%; top: 6
 div#homePage_section_2 > div { float: none; display: inline-block; width: 33%;}
 	div#homePage_section_2 > div h3 { text-align: center; height: 52px;}
 
-div#homePage_section_3 { }
+div#homePage_section_3 { background: url(../img/homeBG3.jpg); background-size: 100%;}
 
 div#homePage_section_4 { }
 	div#homePage_section_4 > div { float: none; display: inline-block; width: 24%;}
