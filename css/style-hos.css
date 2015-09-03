@@ -11,7 +11,9 @@
 
 .main_section{ height: 100vh;}
 	.main_section.adaptiveHeight {height: 100%;}
+	.main_section.shadowBorder { box-shadow: 0px 0px 25px #000000 inset;}
 	.main_section .right_float { float: right;}
+	.main_section .right_float.relative40 { position: relative; top: 40%;}
 
 button { border: none; background: #00afff; color: #ffffff; padding: 5px 15px; border-radius: 5px;}
 
@@ -20,7 +22,7 @@ h1.header { width: 50%; min-width: 500px; text-align: center;}
 	#home_header_1, #home_header_3 { left: 40%;top: 40%;}
 	#home_header_2, #home_header_4 { width: 100%;}
 
-div#homePage_section_1 { background:url(../img/homeBG1.jpg); background-size: 100%; position: relative;}
+div#homePage_section_1 { background:url(../img/homeBG1.jpg); background-size: 100%;}
 div#homePage_section_1_buttons { width: 50%; min-width: 500px; left: 50%; top: 60%;}
 	#homePage_section_1_buttons > br { display: none;}
 	#homePage_section_1_buttons > button:first-of-type { margin-right: 20%;}
