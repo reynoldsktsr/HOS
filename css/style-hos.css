@@ -20,11 +20,16 @@
 button { border: none; background: #00afff; color: #ffffff; padding: 5px 15px; border-radius: 5px; min-width: 25%; margin:0px 12%;}
 
 
+/*
+*
+* HOME PAGE STYLES
+*
+*/
 h1.header { width: 50%; min-width: 500px; text-align: center; margin: 0px; padding: 20px 0;}
-	#home_header_1, #home_header_3 { left: 40%;top: 40%;}
+	#home_header_1, #home_header_3 { left: 40%;top: 40%; color: black; text-shadow: 0px 0px 22px white;}
 	#home_header_2, #home_header_4 { width: 100%;}
 
-div#homePage_section_1 { background:url(../img/homeBG1.jpg); background-size: 100%;}
+div#homePage_section_1 { background:url(../img/homeBG1.jpg) no-repeat; background-size: cover;}
 div#homePage_section_1_buttons { width: 50%; min-width: 500px;}
 	#homePage_section_1_buttons > br { display: none;}
 
@@ -32,11 +37,34 @@ div#homePage_section_2 > div { float: none; display: inline-table; width: 33%; m
 	div#homePage_section_2 > div h3 { text-align: center; height: 52px;}
 	div#homePage_section_2 > div ul li { line-height: 25px;}
 
-div#homePage_section_3 { background: url(../img/homeBG3.jpg); background-size: 100%;}
+div#homePage_section_3 { background: url(../img/homeBG3.jpg) no-repeat; background-size: cover;}
 
 div#homePage_section_4 { }
 	div#homePage_section_4 > div { float: none; display: inline-block; width: 20%; border-bottom: 1px solid gray; padding: 0; margin:0px 2.4%; text-align: center;}
-	div#homePage_section_4 > div:first-of-type { /*margin-left: 2%;*/}
+	div#homePage_section_4 > div:first-of-type { margin-left: 2%;}
 
 .copyright-wrapper { background: #ffffff; padding-top: 10px; padding-bottom: 10px;}
 	.copyright-wrapper img { max-height: 90px;}
+
+/*
+*
+* Job Seekers PAGE STYLES
+*
+*/
+div#jobSeekers h1.header { width: 50%; min-width: 500px; margin: 0px auto; padding: 20px 0;}
+	#jobSeekers_header_2 { width: 100%; text-align: center;}
+	#jobSeekers_header_3 { left: 40%; top: 40%; color: black; text-shadow: 0px 0px 22px white; text-align: left;}
+
+div#jobSeekers_section_1 { height: 500px; background: url(../img/jobSeekersBG1.jpg) no-repeat; background-size: cover;}
+
+div#jobSeekers_section_2 { }
+	div#jobSeekers_section_2 p { display: block; line-height: 50px;}
+	div#jobSeekers_section_2 span.checkWithCircle { width: 50px; height: 50px; border-radius: 50%; background: #00afff; float: left; margin-right: 10px;}
+	div#jobSeekers_section_2 .fa { color: white; font-size: 30px; margin-left: 13px; margin-top: 10px;}
+
+div#jobSeekers_section_3 { height:350px; background: url(../img/jobSeekersBG3.jpg) no-repeat; background-size: cover;}
+	div#jobSeekers_section_3 .right_float.relative40 { top: 27%;}
+
+div#jobSeekers_section_4 { }
+	div#jobSeekers_section_4 .testimonial { float: none; margin: 0px auto; border-bottom: 1px solid black; margin-bottom: 10px;}
+	div#jobSeekers_section_4 .testimonial_source { position: absolute; left: -100px; top: 40%; max-width: 100px;}
