@@ -1,3 +1,4 @@
+header#header-wrapper { z-index: 9999;}
 .top-header, .sticky .top-header { padding: 0;}
 	.top-header .logo { margin: 0; max-height: 90px;}
 		.top-header .logo img { max-height: 90px;}
@@ -68,3 +69,55 @@ div#jobSeekers_section_3 { height:350px; background: url(../img/jobSeekersBG3.jp
 div#jobSeekers_section_4 { }
 	div#jobSeekers_section_4 .testimonial { float: none; margin: 0px auto; border-bottom: 1px solid black; margin-bottom: 10px;}
 	div#jobSeekers_section_4 .testimonial_source { position: absolute; left: -100px; top: 40%; max-width: 100px;}
+
+/*
+*
+* Job Openings PAGE STYLES
+*
+*/
+div#jobOpenings h1.header { width: 100%;}
+
+div#jobOpenings_section_1 { }
+
+div#jobOpenings_section_2 { padding-top: 0;}
+	div#jobOpenings_section_2 .tab-content-project { margin: 0 0 30px 0;}
+
+/*
+*
+* Employers PAGE STYLES
+*
+*/
+div#employers h1.header { width: 50%; min-width: 500px; margin: 0px auto; padding: 20px 0;}
+	#employers_header_2, #employers_header_3 { width: 100% !important;}
+
+div#employers_section_1 { background: url(../img/employersBG1.jpg) no-repeat; background-size: cover;}
+
+div#employers_section_2 { }
+	div#employers_section_2 .col-sm-2 { height: 260px;}
+		div#employers_section_2 .employersConnectColumn { background: #00afff; height: 100%; text-align: center; color: black; position: relative; border: 1px solid #dddddd; overflow: hidden;}
+			.employersConnectColumn .employersConnectColumnTitle { height: 40%; position: relative;}
+				.employersConnectColumnTitle span { position: absolute;width: 100%; left: 0; top: 20px;}
+			.employersConnectColumn .employersConnectColumnCenter { position: absolute; height: 100px; width: 60%; top: 20%; left: 20%; border-radius: 50%; box-shadow: 0px 0px 30px inset; background: white; z-index: 1000;}
+				.employersConnectColumnCenter i.fa { font-size: 40px; margin-top: 30px; margin-left: 5px;}
+			.employersConnectColumn .employersConnectColumnDescription { background: white; height: 60%; position: relative;}
+				.employersConnectColumnDescription span.bottomPosition { position: absolute; width: 100%; left: 0; top: 55px; padding: 0 5px;}
+
+div#employers_section_3 { }
+	div#employers_section_3 p { display: block; line-height: 50px;}
+	div#employers_section_3 span.checkWithCircle { width: 50px; height: 50px; border-radius: 50%; background: #00afff; float: left; margin-right: 10px;}
+		div#employers_section_3 span.checkWithCircle .fa { color: white; font-size: 30px; margin-left: 13px; margin-top: 10px;}}
+}
+
+/*
+*
+* Industries We Serve PAGE STYLES
+*
+*/
+div#industriesWeServe h1.header { }
+	#industriesWeServe_header_1 { width: 100%;}
+	#industriesWeServe_subheader_1 { width: 100%; text-align: center; margin-top: 0; font-size: 14pt;}
+
+div#industriesWeServe_section_1 { }
+	div#industriesWeServe_section_1 img { width: 100%;}
+	div#industriesWeServe_section_1 p:first-of-type { display: none;}
+	div#industriesWeServe_section_1 p { text-align: center; background: #00afff; color: white; padding: 10px 0;}
