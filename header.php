@@ -38,7 +38,7 @@ global $current_user;
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri());?>/css/style-hos.css">
 </head>
 
-<body <?php body_class(); ?> onload="getreq()">
+<body <?php body_class(); ?>>
 
 <!-- MENU DOOR -->
 <div class="overlay overlay-scale">
