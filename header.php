@@ -38,7 +38,7 @@ global $current_user;
     <script src="http://hiredon.mycompas.com/staff/consol_careers/dyniframe2.js"></script>
 </head>
 
-<body <?php body_class(); ?> onload="getreq()">>
+<body <?php body_class(); ?> onload="getreq()">
 
 <!-- MENU DOOR -->
 <div class="overlay overlay-scale">
