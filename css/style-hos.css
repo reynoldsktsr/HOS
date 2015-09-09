@@ -16,7 +16,7 @@ header#header-wrapper { z-index: 9999;}
 	.main_section .right_float { float: right;}
 	.main_section .right_float.relative40 { position: relative; top: 40%;}
 
-.listImage { margin-left: 50%; transform: translateX(-50%); border-radius: 50%;}
+.listImage { margin-left: 50%; transform: translateX(-50%); border-radius: 50%; width: 150px;}
 
 button { border: none; background: #00afff; color: #ffffff; padding: 5px 15px; border-radius: 5px; min-width: 25%; margin:0px 12%;}
 
