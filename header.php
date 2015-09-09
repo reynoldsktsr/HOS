@@ -27,7 +27,6 @@ global $current_user;
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="http://hiredon.mycompas.com/staff/consol_careers/dyniframe2.js"></script> 
     <?php ae_favicon(); ?>
 	<?php 
     wp_head();

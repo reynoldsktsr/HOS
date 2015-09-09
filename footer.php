@@ -201,18 +201,4 @@ if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' 
 <!--// MODAL CLOSE PROJECT-->
 
 </body>
-<script type="text/javascript">
-    /*if (window.addEventListener) {
-        window.addEventListener('message', receiveMessage, false);
-    } else if (window.attachEvent) { //IE
-        window.attachEvent('onmessage', receiveMessage);
-    }
-
-    function receiveMessage(evt) {
-        //alert("iframe content: "+evt.data);
-        var iframe = document.getElementById('compframe');
-        iframe.style.height = evt.data + 'px';
-    }*/
-</script>
-
 </html>
