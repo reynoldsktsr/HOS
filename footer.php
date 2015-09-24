@@ -10,15 +10,10 @@ wp_reset_query();
  * @since FreelanceEngine 1.0
  */
 ?>
-<?php
-if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' )
-    || is_active_sidebar( 'fre-footer-3' ) || is_active_sidebar( 'fre-footer-4' )
-    )
-{$flag=true; ?>
 <!-- FOOTER -->
 <footer>
-	<div class="container">
-    	<div class="row">
+    <div class="container">
+	<!-- <div class="row">
             <div class="col-md-3 col-sm-6">
                 <?php if( is_active_sidebar( 'fre-footer-1' ) ) dynamic_sidebar( 'fre-footer-1' );?>
             </div>
@@ -31,11 +26,14 @@ if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' 
             <div class="col-md-3 col-sm-6">
                 <?php if( is_active_sidebar( 'fre-footer-4' ) ) dynamic_sidebar( 'fre-footer-4' );?>
             </div>
-        </div>
+        </div> -->
+
+    <!-- BEGIN CUSTOM CODE -->
+
+        <?php get_template_part( 'content', 'footer'); ?>
     </div>
 </footer>
-<?php }else{ $flag = false;} ?>
-<div class="copyright-wrapper <?php if(!$flag){ echo 'copyright-wrapper-margin-top'; } ?> ">
+<!-- <div class="copyright-wrapper <?php if(!$flag){ echo 'copyright-wrapper-margin-top'; } ?> ">
 <?php
     $copyright = ae_get_option('copyright');
     $has_nav_menu = has_nav_menu( 'et_footer' );
@@ -65,7 +63,7 @@ if( is_active_sidebar( 'fre-footer-1' )    || is_active_sidebar( 'fre-footer-2' 
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- FOOTER / END -->
 

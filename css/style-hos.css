@@ -16,6 +16,24 @@ header#header-wrapper { z-index: 9999;}
 	.main_section .right_float { float: right;}
 	.main_section .right_float.relative40 { position: relative; top: 40%;}
 
+footer { color: inherit; background: white; padding: 30px 0;}
+	footer .contactContainer { border-bottom: 1px solid gray; padding-bottom: 30px;}
+	footer .footerColumn { height: 440px;}
+	footer #contactInfo { text-align: right;}
+		h3.contactHeader { margin-bottom: 30px;}
+		#contactInfo p.contactContent { margin-bottom: 30px;}
+			p.contactContent span { display: block;}
+	footer .mapColumn { border-left: 1px solid gray; border-right: 1px solid gray; padding: 15px;}
+	footer #contactMap { width: 100%; height: 100%;}
+		#contactMap iframe { height: 100%; width: 100%;}
+	footer #contactFormContainer { width: 100%; height: 100%;}
+		#contactFormContainer form { width: 100%;}
+			#contactFormContainer form div { margin-bottom: 15px;}
+				#contactFormContainer form div * { display: block;}
+				#contactFormContainer form div input, #contactFormContainer form div textarea { width: 100%;}
+				#contactFormContainer form div textarea { min-height: 100px;}
+	footer .copyrightContainer { margin-top: 30px;}
+
 .listImage { margin-left: 50%; transform: translateX(-50%); border-radius: 50%; width: 150px;}
 
 button { border: none; background: #00afff; color: #ffffff; padding: 5px 15px; border-radius: 5px; min-width: 25%; margin:0px 12%;}
@@ -121,3 +139,8 @@ div#industriesWeServe_section_1 { }
 	div#industriesWeServe_section_1 img { width: 100%;}
 	div#industriesWeServe_section_1 p:first-of-type { display: none;}
 	div#industriesWeServe_section_1 p { text-align: center; background: #00afff; color: white; padding: 10px 0;}
+/*
+*
+* Footer
+*
+*/
