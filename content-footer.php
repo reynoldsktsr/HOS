@@ -20,7 +20,7 @@
 	<div class="col-md-4 footerColumn">
 		<div id="contactFormContainer">
 			<h3 class="contactHeader">Send Us A Message</h3>
-			<form id="contactForm">
+			<form id="contactForm" action="email-contact.php?action=contact" method="post">
 				<div>
 					<label for="name">Your Name (Required)</label>
 					<input type="text" id="name" name="nameField">
