@@ -1,7 +1,7 @@
 <?php
+// Template Name: HOS Home
 
-
-?>
+get_header();?>
 
 <div id="homePage">
 <div id="homePage_section_1" class="main_section shadowBorder">
@@ -81,3 +81,5 @@
 </div>
 </div>
 </div>
+
+<?php get_footer();?>
