@@ -3,6 +3,12 @@ header#header-wrapper { z-index: 9999;}
 	.top-header .logo { margin: 0; max-height: 90px;}
 		.top-header .logo img { max-height: 90px;}
 	.top-header #menuContain { height: 90px; position: relative;}
+	@media screen and (max-width: 1000px) {
+    #menuContain {
+       display: none;
+    }
+	}
+
 	.top-header #menuBar { position: absolute;top: 50%; transform: translateY(-50%);}
 		.top-header #menuBar li { display: inline-block; padding: 5px 10px; border-radius: 3px;}
 		.top-header #menuBar li.active { background: #00afff;}
