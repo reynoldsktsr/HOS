@@ -3,7 +3,7 @@ header#header-wrapper { z-index: 9999;}
 	.top-header .logo { margin: 0; max-height: 90px;}
 		.top-header .logo img { max-height: 90px;}
 	.top-header #menuContain { height: 90px; position: relative;}
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 900px) {
     #menuContain {
        display: none;
     }
