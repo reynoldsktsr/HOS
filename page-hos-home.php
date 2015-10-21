@@ -1,11 +1,11 @@
 <?php
+// Template Name: HOS Home afsdfgjsf
 
-
-?>
+get_header();?>
 
 <div id="homePage">
-<div id="homePage_section_1" class="main_section shadowBorder">
-<div class="col-md-6 right_float relative40">
+	<div id="homePage_section_1" class="main_section shadowBorder">
+		<div class="col-md-6 right_float relative40">
 <h1 id="home_header_1" class="header">Connecting People with Jobs</h1>
 <div id="homePage_section_1_buttons">
 <button id="candidates" onclick="window.location.href='/job-seekers'" class="home_button">Candidates</button>
@@ -81,3 +81,5 @@
 </div>
 </div>
 </div>
+
+<?php get_footer();?>
