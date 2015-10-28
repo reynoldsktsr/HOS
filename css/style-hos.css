@@ -11,6 +11,11 @@ header#header-wrapper { z-index: 9999;}
 #header-section1 {width:20%;} 
 #header-section2 {width:60%;} 
 #header-section3 {width:20%;} 
+@media screen and (max-width: 800px) {
+    #header-section1 {width:40%;} 
+	#header-section2 {display: none;} 
+	#header-section3 {width:40%;} 
+	}
 	.top-header #menuBar { position: absolute;top: 50%; transform: translateY(-50%);}
 		.top-header #menuBar li { display: inline-block; padding: 5px 10px; border-radius: 3px;}
 		.top-header #menuBar li.active { background: #00afff;}
