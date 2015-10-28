@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Job Openings
+ * Template Name: HOS Job Openings
  */
 get_header();?>
 <script type="text/javascript"   src="http://COMPANYBUILDNAME.mycompas.com/staff/consol_careers/dyniframe2.js"></script>

@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Static Content
+ * Template Name: HOS Static Content
  */
 get_header();?>
 
