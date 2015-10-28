@@ -3,7 +3,7 @@ header#header-wrapper { z-index: 9999;}
 	.top-header .logo { margin: 0; max-height: 90px;}
 		.top-header .logo img { max-height: 90px;}
 	.top-header #menuContain { height: 90px; position: relative;}
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 500px) {
     #menuContain {
        display: none;
     }
@@ -25,19 +25,15 @@ header#header-wrapper { z-index: 9999;}
 footer { color: inherit; background: white; padding: 30px 0;}
 	footer .contactContainer { border-bottom: 1px solid gray; padding-bottom: 30px;}
 	footer .footerColumn { height: 440px;}
-	footer #contactInfo { text-align: right;}
-	@media screen and (max-width: 950px) {
-    #contactInfo{
-       text-align: center;
-    }
-	}
+	footer #contactInfo { text-align: center;}
+	
 		h3.contactHeader { margin-bottom: 30px;}
 		#contactInfo p.contactContent { margin-bottom: 30px;}
 			p.contactContent span { display: block;}
 	footer .mapColumn { border-left: 1px solid gray; border-right: 1px solid gray; padding: 15px;}
 	footer #contactMap { width: 100%; height: 100%;}
 		#contactMap iframe { height: 100%; width: 100%;}
-	footer #contactFormContainer { width: 100%; height: 100%;}
+	footer #contactFormContainer { width: 100%; height: 100%;text-align: center}
 		#contactFormContainer form { width: 100%;}
 			#contactFormContainer form div { margin-bottom: 15px;}
 				#contactFormContainer form div * { display: block;}
