@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-xs-4" id = "header-section1">
-                    <a href="<?php echo home_url(); ?>" class="logo"><?php fre_logo('site_logo_black') ?></a>
+                    <a href="<?php echo home_url(); ?>" class="logo" style="text-align:left"><?php fre_logo('site_logo_black') ?></a>
                 </div>
                 <div class="col-md-8 col-xs-4" id = "header-section2">
                     <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain'));?>
