@@ -12,11 +12,18 @@
 			<p>(Interviews by Appointment Only)</p>
 		</div>
 	</div>
-	<div class="col-md-4 footerColumn mapColumn">
+	<div class="col-md-4 footerColumn mapColumn" id="map-section">
 		<div id="contactMap">
 			<iframe src="https://mapsengine.google.com/map/embed?mid=zwBFigxGoGOA.k-9uCWS_R6p8"></iframe>
 		</div>
 	</div>
+	<style>
+		@media screen and (max-width: 992px) {
+	    #map-section{
+	       display: none;
+	    }
+	}
+	</style>
 	<div class="col-md-4 footerColumn">
 		<div id="contactFormContainer">
 			<h3 class="contactHeader">Send Us A Message</h3>
