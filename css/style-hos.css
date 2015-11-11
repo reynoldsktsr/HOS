@@ -167,9 +167,10 @@ div#industriesWeServe_section_1 { }
 
 .page-main { height: 100%;}
 	.page-main .section { height: 100%;}
+		.page-main .section .wrapper { height: 100%; position: relative;}
 	.page-main .poster { height: 80vh; background-size: cover;}
 	.page-main .about { font-size: 48px;}
-		.page-main .poster .wrapper { height: 100%; position: relative;}
+		
 
 .centered { margin: 0 auto; text-align: center;}
 .middle { height:100%; margin-top: 50%; transform:translateY(-50%); position: absolute;}
