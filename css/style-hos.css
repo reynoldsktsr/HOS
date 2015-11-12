@@ -197,4 +197,10 @@ div#industriesWeServe_section_1 { }
 	.image-half img { margin-left: -90%;}
 
 
+/*
+*
+* SIGNUP STYLES
+*
+*/
 
+div#signuppage1 {width:15px; background-color:#3b8ced; margin-left:50px; border-left: 2px solid #3b8ced; border-radius:5px; float:left;}
