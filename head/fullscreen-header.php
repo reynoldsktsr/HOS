@@ -107,10 +107,10 @@
     var jobseekers = document.querySelectorAll('[title=jobseekers]');
     var employers = document.querySelectorAll('[title=employers]');
     for (i=0; i<jobseekers.length; i++){
-        jobseekers.setAttribute("onClick","window.location.href='/#jobseekers'");
+        jobseekers[i].setAttribute("onClick","window.location.href='/#jobseekers'");
     }
     for (j=0; j<employers.length; j++){
-        employers.setAttribute("onClick","window.location.href='/#employers'");
+        employers[j].setAttribute("onClick","window.location.href='/#employers'");
     }
     
     });
