@@ -166,11 +166,35 @@ div#industriesWeServe_section_1 { }
 
 
 .page-main { height: 100%;}
-	.page-main .section { height: 100%;}
+	.page-main .section { height: 100%; border-bottom: 1px solid gray; padding-bottom: 40px;}
 		.page-main .section .wrapper { height: 100%; position: relative;}
 	.page-main .poster { height: 80vh; background-size: cover;}
+		.page-main .poster .content { background: rgba(0,0,0,0.3); margin-left: 50%; transform: translate(-50%,-50%); padding: 20px;}
+			.page-main .poster .content h1 { color: white;}
+			.page-main .poster .content hr { width: 400px; border-top: 1px solid #fff; margin: 20px auto;}
+			.page-main .poster .content .subheader { color: white; font-weight: 200;}
 	.page-main .about { font-size: 48px;}
+		.page-main .about .content { font-weight: 100; padding: 30px 15px;}
+	.page-main .highlights { }
+		.page-main .highlights .content { }
+			.page-main .highlights .content h2 { font-size: 20pt; font-weight: 300;}
+			.page-main .highlights .content img { width: 50%;}
+	.page-main .two-column { }
+		.page-main .two-column .content { }
+			.page-main .two-column .content h1 { margin-bottom: 20px;}
+			.page-main .two-column .content .list { text-align: left;}
+				.page-main .two-column .content .list ol { padding: 0;}
+				.page-main .two-column .content .list ul { list-style: none; padding: 0;}
+					.page-main .two-column .content .list li { margin-bottom: 20px; font-weight: 200; font-size: 14pt;}
+					.page-main .two-column .content .list ul li:before { content: url(../img/tri-angle.png); margin-right: 10px;}
+					.page-main .two-column .content .list ol li b:after { content: "\2014"; margin: 0 10px;}
+
 		
 
 .centered { margin: 0 auto; text-align: center;}
-.middle { height:100%; margin-top: 50%; transform:translateY(-50%); position: absolute;}
+.middle { height: auto; margin-top: 50vh; transform:translateY(-50%); position: absolute;}
+.image-half { width: 50%; overflow: hidden;}
+	.image-half img { margin-left: -90%;}
+
+
+
