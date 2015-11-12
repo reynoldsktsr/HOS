@@ -42,7 +42,7 @@ get_header();?>
 			</div>
 		</div>
 
-		<div class="row section two-column">
+		<div id="jobseekers" class="row section two-column">
 			<div class="col-xs-12 centered content image-left">
 				<h1>Job Seekers</h1>
 				<div class="col-xs-12 col-sm-6 image-half">
@@ -62,7 +62,7 @@ get_header();?>
 			</div>
 		</div>
 
-		<div class="row section two-column image-right">
+		<div id="employers" class="row section two-column image-right">
 			<div class="col-xs-12 centered content">
 				<h1>Employers</h1>
 				<div class="col-xs-12 col-sm-8 list">

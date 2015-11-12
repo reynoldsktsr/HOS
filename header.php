@@ -38,6 +38,7 @@ global $current_user;
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri());?>/css/bootstrap.css">
     <script src="http://hiredon.mycompas.com/staff/consol_careers/dyniframe2.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
 </head>
 
 <body <?php body_class(); ?> onload="getreq()">

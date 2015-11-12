@@ -102,3 +102,11 @@
         </div>
     </div>
 </header>
+<script type="text/javascript">
+    $(document).ready(function(){
+    var jobseekers = document.querySelectorAll('[title=jobseekers]')[0];
+    var employers = document.querySelectorAll('[title=employers]')[0];
+    jobseekers.setAttribute("onClick","window.location.href='/#jobseekers'");
+    employers.setAttribute("onClick","window.location.href='/#employers'");
+    });
+</script>
