@@ -55,7 +55,7 @@
                                 <div class="dropdown">
                                     <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                         <span class="avatar-and-name ">
-                                            <span class="avatar">
+                                            <!-- <span class="avatar">
                                                 <?php 
                                                     $notify_number = 0;
                                                     if(function_exists('fre_user_have_notify') ) {
@@ -66,10 +66,10 @@
                                                     } 
                                                     echo get_avatar($user_ID);
                                                 ?>
-                                            </span>
+                                            </span> -->
                                             <?php echo $current_user->display_name; ?>
                                         </span>
-                                        <span class="caret"></span>
+                                        <!-- <span class="caret"></span> -->
                                     </div>
                                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                                         <li><span class="avatar-and-name avatar-name-ontop">

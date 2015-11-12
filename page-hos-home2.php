@@ -16,7 +16,7 @@ get_header();?>
 		</div>
 
 		<div class="row section about">
-			<div class="col-xs-12 centered content">
+			<div class="col-xs-12 content">
 				We offer flexible staffing solutions<br>
 				We should add more things to say here<br>
 				This is now the third line of text we<br>

@@ -14,7 +14,7 @@
                 <div class="col-md-2 col-xs-4" id = "header-section1">
                     <a href="<?php echo home_url(); ?>" class="logo" style="text-align:left"><?php fre_logo('site_logo_black') ?></a>
                 </div>
-                <div class="col-md-8 col-xs-4" id = "header-section2">
+                <div class="col-md-8 col-xs-6" id = "header-section2">
                     <?php wp_nav_menu(array('menu_class'=>'main_menu','menu_id'=>'menuBar','container_id'=>'menuContain'));?>
                     <!-- <ul class="btn-menu-call">
                         <?php if(has_nav_menu('et_header')) { // dont render button menu if dont have menu ?>
@@ -23,7 +23,7 @@
                         <li><a href="javascript:void(0);" class="trigger-overlay trigger-search"><i class="fa fa-search"></i><span><?php _e("SEARCH", ET_DOMAIN); ?></span></a></li>
                     </ul> -->
                 </div>
-                <div class="col-md-2 col-xs-4" id = "header-section3">
+                <div class="col-md-2 col-xs-2" id = "header-section3">
                 	<div class="login-form-header-wrapper">
 						<?php if(!is_user_logged_in()){ ?>
                         <div class="non-login">
@@ -35,7 +35,7 @@
                             <div class="dropdown">
                                 <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                     <span class="avatar-and-name">
-                                        <span class="avatar">
+                                        <!-- <span class="avatar">
                                             <?php 
                                                 $notify_number = 0;
                                                 if(function_exists('fre_user_have_notify') ) {
@@ -46,14 +46,15 @@
                                                 } 
                                                 echo get_avatar($user_ID);
                                             ?>
-                                        </span>
-                                        <?php echo $current_user->display_name; ?>
+                                        </span> -->
+                                        <?php //echo $current_user->display_name; ?>
+                                        Account
                                     </span>
-                                    <span class="caret"></span>
+                                    <!-- <span class="caret"></span> -->
                                 </div>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                                     <li><span class="avatar-and-name avatar-name-ontop">
-                                        <span class="avatar">
+                                        <!-- <span class="avatar">
                                             <?php 
                                                 $notify_number = 0;
                                                 if(function_exists('fre_user_have_notify') ) {
@@ -64,10 +65,10 @@
                                                 } 
                                                 echo get_avatar($user_ID);
                                             ?>
-                                        </span>
+                                        </span> -->
                                         <?php echo $current_user->display_name; ?>
                                     </span>
-                                    <span class="caret"></span></li>
+                                    <!-- <span class="caret"></span> --></li>
                                     <li role="presentation" class="divider"></li>
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" href="<?php echo et_get_page_link("profile") ?>" class="display-name">
@@ -75,7 +76,7 @@
                                         </a>
                                     </li>
                                     <li role="presentation" class="divider"></li>
-                                    <li role="presentation">
+                                    <!-- <li role="presentation">
                                         <a href="javascript:void(0);" class="trigger-overlay trigger-notification">
                                             <i class="fa fa-flag"></i>
                                             <?php 
@@ -85,8 +86,8 @@
                                                 }
                                              ?>
                                         </a>
-                                    </li>
-                                    <li role="presentation" class="divider"></li>
+                                    </li> -->
+                                    <!-- <li role="presentation" class="divider"></li> -->
                                     <li role="presentation">
                                         <a role="menuitem" tabindex="-1" href="<?php echo wp_logout_url(); ?>" class="logout">
                                             <i class="fa fa-sign-out"></i><?php _e("Logout", ET_DOMAIN) ?>
