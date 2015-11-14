@@ -4,8 +4,7 @@
 get_header();?>
 <style>
 div#signuppage{}
-div#signup{color:blue; width:1024; text-align:center; background-color:#CCC; font-size:50px;}
-div#signuppage1 {width:35px; background-color:#3b8ced; vertical-align:middle; margin-left:40%; border-left: 2px solid #3b8ced; border-left-radius:20px; float:left;}
+div#signuppage1 {width:35px; color:white; font-size:36px; background-color:#3b8ced; vertical-align:middle; margin-left:40%; border-left: 2px solid #3b8ced; border-left-radius:20px; float:left;}
 div#login{background-image: url(<?php echo get_template_directory_uri();?>/backgroundsignin.png); background-repeat:no-repeat; background-position:center;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:400px;}
 
 .icon{width:35px;}
@@ -16,12 +15,9 @@ div#login{background-image: url(<?php echo get_template_directory_uri();?>/backg
 
 <div id="signuppage">
 
-<div  id="signup">
-   START APPLYING TODAY
-</div>
 <form method="post" action="">
 <div id="login">
-
+HiredOn
 
 <br /><br /><br /><br /><br />
     <div id="signuppage1">
