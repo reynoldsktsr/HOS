@@ -190,12 +190,12 @@
                                         <p>example video</p>
                                         <iframe width="200" height="200" src="https://www.youtube.com/embed/phyU2BThK4Q" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                    <div id="video-upload-submit">
-                                       
+                                 </div>
+                                 <div id="video-upload-submit">
+                                        <p id="video-upload-p"> Link to the Video: </p>
                                         <input type="text" id="video-upload-link-input" size="30">
-                                        <input type="submit" value="Save Link" id="video-upload-link-submit">
-                                    </div>
-                            </div>
+                                         <input type="submit" value="Save Link" id="video-upload-link-submit">
+                                 </div>
                         </div>
                             <style>
                             #tab_video_upload-wrapper{
@@ -206,10 +206,12 @@
                                     width:60%;
                                 }
                                 #video-upload-text-example-video{
+                                    float: left;
                                     text-align: center;
                                     padding-top: 25%;
-                                    float: left;
+                                    padding-bottom: 25%;
                                     width:40%;
+
                                 }
                                 #video-upload-text-tab{
                                     padding-left: 5%;
@@ -218,11 +220,11 @@
                                     color:#337ab7;
                                 }
                                 #video-upload-submit{
-                                    width: 100%;
+                                    display: block;
                                     padding-left: 3%;
                                 }
                                 #video-upload-link-submit{
-                                     float: left;
+                                    display: inline;
                                     border-radius: 5px;
                                     background-color:#337ab7;
                                     color:white;
@@ -234,150 +236,104 @@
                                     border-radius: 5px;
                                     border-color: #337ab7;
                                 }
+                                #video-upload-p{
+                                    display: inline;
+                                }
                             </style>
 
                             <!-- Tab profile details -->
                             <?php if(fre_share_role() || ae_user_role() == FREELANCER) { ?> 
                             <div class="tab-pane fade" id="tab_profile_details">
-                            	<div class="detail-profile-page">
-                                	<form class="form-detail-profile-page" id="profile_form">
-                                        <div class="form-group">
-                                        	<div class="form-group-control">
-                                                <label><?php _e('Professional Title', ET_DOMAIN) ?></label>
-                                                <input class="form-control"  type="text" name="et_professional_title" value="<?php echo $job_title ?>" placeholder="<?php _e("e.g: Wordpress Developer", ET_DOMAIN) ?>">
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    	<div class="form-group">
-                                        	<div class="form-group-control">
-                                                <label><?php _e('Your Hourly Rate', ET_DOMAIN) ?></label>
-                                                <div class="row">
-                                                    <div class="col-xs-8">
-                                                        <input class="form-control"  type="text" name="hour_rate" value="<?php echo $hour_rate ?>" placeholder="<?php _e('e.g:30', ET_DOMAIN) ?>">
-                                                    </div>
-                                                    <div class="col-xs-4">
-                                                        <span class="profile-exp-year">
-                                                        <?php $currency = ae_get_option('content_currency'); 
-                                                        if($currency){
-                                                            echo $currency['code']; 
-                                                        }else{ 
-                                                            _e('USD', ET_DOMAIN);
-                                                        } ?>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="form-group">
-                                            <div class="skill-profile-control form-group-control">
-                                            	<label><?php _e('Your Skills', ET_DOMAIN) ?></label>
-                                                <?php 
-                                                $switch_skill = ae_get_option('switch_skill');
-                                                if(!$switch_skill){
-                                                    ?>
-                                                    <input class="form-control skill" type="text" id="skill" placeholder="<?php _e("Skills (max is 5)", ET_DOMAIN); ?>" name=""  autocomplete="off" class="skill" spellcheck="false" >
-                                                    <ul class="skills-list" id="skills_list"></ul>
-                                                    <?php
-                                                }else{
-                                                    $c_skills = array();
-                                                    if(!empty($current_skills)){
-                                                        foreach ($current_skills as $key => $value) {
-                                                            $c_skills[] = $value->term_id;
-                                                        };
-                                                    }
-                                                    ae_tax_dropdown( 'skill' , array(  'attr' => 'data-chosen-width="95%" data-chosen-disable-search="" multiple data-placeholder="'.__(" Skills (max is 5)", ET_DOMAIN).'"', 
-                                                                        'class' => 'sw_skill required', 
-                                                                        'hide_empty' => false, 
-                                                                        'hierarchical' => true , 
-                                                                        'id' => 'skill' , 
-                                                                        'show_option_all' => false,
-                                                                        'selected' =>$c_skills
-                                                                        ) 
-                                                    );
-                                                }
-                                                
-                                                ?>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="form-group">
-                                            <div class="profile-category">
-                                                <label><?php _e('Category', ET_DOMAIN) ?></label>
-                                                <?php 
-                                                    ae_tax_dropdown( 'project_category' , 
-                                                          array(  
-                                                                'attr'            => 'data-chosen-width="95%" data-chosen-disable-search="" data-placeholder="'.__("Choose categories", ET_DOMAIN).'"', 
-                                                                'class'           => 'chosen multi-tax-item tax-item required cat_profile', 
-                                                                'hide_empty'      => false, 
-                                                                'hierarchical'    => true , 
-                                                                'id'              => 'project_category' , 
-                                                                'selected'        => $category,
-                                                                'show_option_all' => false
-                                                              ) 
-                                                    );
-                                                ?>
-                                            </div>
-                                        </div> 
-                                        <div class="clearfix"></div>
-                                        <div class="form-group">
-                                            <div class="form-group-control">
-                                                <label><?php _e('Your Country', ET_DOMAIN) ?></label>
-                                                <input class="form-control" type="text" id="country" placeholder="<?php _e("Country", ET_DOMAIN); ?>" name="country" value="<?php if($country){echo $country;} ?>" autocomplete="off" class="country" spellcheck="false" >
-                                            </div>
-                                        </div> 
-                                        <div class="clearfix"></div>
-                                        <div class="form-group about-you">
-                                        	<div class="form-group-control row-about-you">
-                                                <label><?php _e('About you', ET_DOMAIN) ?></label>
-                                                <div class="clearfix"></div>
-                                                <textarea class="form-control" name="post_content" id="about_content" cols="30" rows="5"><?php echo trim($about) ?></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="form-group">
-                                        	<div class="experience">
-                                                <label><?php _e('Your Experience', ET_DOMAIN) ?></label>
-                                                <div class="row">
-                                                    <div class="col-xs-3">
-                                                        <input class="form-control number is_number" type="number" name="et_experience" value="<?php echo $experience; ?>" />        
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <span class="profile-exp-year"><?php _e("year(s)", ET_DOMAIN); ?></span>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <!--// project description -->
-                                        <?php do_action( 'ae_edit_post_form', PROFILE, $profile ); ?>
-                                        <div class="form-group portfolios-wrapper"> 
-                                        	<div class="form-group-control">
-                                                <label><?php _e('Your Portfolio', ET_DOMAIN) ?></label>
-                                                <div class="edit-portfolio-container">
-                                                    <?php                                                     
-                                                        // list portfolio
-                                                        query_posts( array(
-                                                            'post_status' => 'publish', 
-                                                            'post_type'   => 'portfolio', 
-                                                            'author'      => $current_user->ID,
-                                                            'posts_per_page' => -1 
-                                                        ));
-                                                        get_template_part( 'list', 'portfolios' ); 
-                                                        wp_reset_query();
-                                                    ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                        <div class="form-group">
-                                        	<input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
-                                        </div>
-                                    </form>
+                                <div class="profile_details_wrapper">
+                            	    <p class="profile_details_text"> Professional Title</p> 
+                                    <input type="text" class="profile_details_input" size="30">
                                 </div>
+                                <div class="profile_details_wrapper">
+                                    <p class="profile_details_text"> Hourly Rate</p> 
+                                    <input type="text" class="profile_details_input" size="30">
+                                 </div>
+                                <div class="profile_details_wrapper">
+                                    <p class="profile_details_text"> Skills (select 5 max)</p> 
+                                    <select name="cars" class= "profile_details_dropdown">
+                                        <option value="volvo">JAVA</option>
+                                        <option value="saab">C++</option>
+                                        <option value="fiat">Python</option>
+                                        <option value="audi">PHP</option>
+                                    </select>
+                                 </div>
+                                <div class="profile_details_wrapper">
+                                    <p class="profile_details_text"> Catagory</p> 
+                                    <select name="cars" class= "profile_details_dropdown">
+                                        <option value="volvo">JAVA</option>
+                                        <option value="saab">C++</option>
+                                        <option value="fiat">Python</option>
+                                        <option value="audi">PHP</option>
+                                    </select>
+                                 </div>
+                                <div class="profile_details_wrapper">
+                                    <p class="profile_details_text"> Country</p> 
+                                    <input type="text" class="profile_details_input" size="30">
+                                 </div>
+                                <div class="profile_details_wrapper">
+                                    <p class="profile_details_text"> Years Experience</p> 
+                                    <input type="text" class="profile_details_input" size="30">
+                                 </div>
+                                 
+                                <p class="profile_details_text" id="profile_details_text_aboutme"> About Me</p>  
+                                 <input type="text" id="profile_details_aboutme">
+                                 <br><br>
+
+                                <div class="profile_details_wrapper" id="profile_details_wrapper_submit">  
+                                    <input type="submit" value="Save Changes" id="profile_details_submit">
+                                 </div>
                             </div>
                             <?php } ?>
+                            <style>
+                                .profile_details_input{
+                                    display:inline;
+                                    width: 250px;
+                                    height: 25px;
+                                    margin-left: 10%;
+                                    margin-right: 10%;
+                                    border-radius: 5px;
+                                    border-color: #337ab7;
+                                }
+                                .profile_details_text{
+                                    display: inline;
+                                    width:20%;
+                                }
+                                .profile_details_wrapper{
+                                    text-align: right;
+                                    margin-bottom:15px;
+                                    display:block;
+                                }
+                                #profile_details_submit{
+                                    border-radius: 5px;
+                                    background-color:#337ab7;
+                                    color:white;
+                                }
+                                #profile_details_aboutme{
+                                    margin-left: 21%;
+                                    height: 200px;
+                                    width: 70%;
+                                     border-radius: 5px;
+                                    border-color: #337ab7;
+                                }
+                                #profile_details_text_aboutme{
+                                    margin-left: 24%;
+                                }
+                                #profile_details_wrapper_submit{
+                                    margin-right: 8%
+                                }
+                                .profile_details_dropdown{
+                                    margin-left: 10%;
+                                    margin-right: 10%;
+                                    border-radius: 5px;
+                                    border-color: #337ab7;
+                                    width: 250px;
+                                    height: 25px;
+                                }
+                            </style>
                             <!--// END PROFILE DETAILS -->
                             <!-- tab project details -->
                             <div class="tab-pane fade" id="tab_project_details">
