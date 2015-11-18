@@ -63,13 +63,28 @@
                             <?php if(fre_share_role() || $user_role == FREELANCER){ ?>
                             <li>
                                 <a href="#tab_profile_details" role="tab" data-toggle="tab">
-                                    <?php _e('Profile Details', ET_DOMAIN) ?>
+                                    <?php _e('Account Info', ET_DOMAIN) ?>
                                 </a>
                             </li>
                             <?php } ?>
                             <li>
                                 <a href="#tab_project_details" role="tab" data-toggle="tab">
                                     <?php _e('Project Details', ET_DOMAIN) ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab_profile_details" role="tab" data-toggle="tab">
+                                    <?php _e('Profile Details', ET_DOMAIN) ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab_video_upload" role="tab" data-toggle="tab">
+                                    <?php _e('Video Upload', ET_DOMAIN) ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab_edit_account" role="tab" data-toggle="tab">
+                                    <?php _e('Edit Account', ET_DOMAIN) ?>
                                 </a>
                             </li>
                         </ul>
@@ -149,6 +164,78 @@
                                 </div>
                             </div>
                             <!--// END ACCOUNT DETAILS -->
+                            <div class="tab-pane fade" id="tab_video_upload">
+                                <div id="tab_video_upload-wrapper">
+                                    <div id="video-upload-text">
+                                        <h3 >Why?</h3>
+                                        <div id="video-upload-text-tab">
+                                            <p>Our clients value employess videos and we hope that you choose to upload one of your own.
+                                                Up-loading a video wiill give companies a better idea of why you are an amazing fit.</p>
+                                            <br>
+                                            <p>We will only share your video link to our clients.</p>
+                                            <br>
+                                            <p class="video-upload-colored-text">Make sure to Keep your video settings set up so that only those with the link can see it.</p>
+                                            <br>
+                                        </div>
+                                        <h3 >Resources and links:</h3>
+                                        <br>
+                                        <div id="video-upload-text-tab">
+                                            <p>Youtube and other sites provide a variaty of resources that will make this an easy process.</p>
+                                            <br>
+                                            <p> Please check out the links below to get started!</p>
+                                            <p class="video-upload-colored-text"> link http://stackoverflow.com/questions/11963780/displayinline-not-working</p>
+                                        </div>
+                                    </div>
+                                    <div id="video-upload-text-example-video">
+                                        <p>example video</p>
+                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/phyU2BThK4Q" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <div id="video-upload-submit">
+                                       
+                                        <input type="text" id="video-upload-link-input" size="30">
+                                        <input type="submit" value="Save Link" id="video-upload-link-submit">
+                                    </div>
+                            </div>
+                        </div>
+                            <style>
+                            #tab_video_upload-wrapper{
+                                display:block;
+                            }
+                                #video-upload-text{
+                                    float: left;
+                                    width:60%;
+                                }
+                                #video-upload-text-example-video{
+                                    text-align: center;
+                                    padding-top: 25%;
+                                    float: left;
+                                    width:40%;
+                                }
+                                #video-upload-text-tab{
+                                    padding-left: 5%;
+                                }
+                                .video-upload-colored-text{
+                                    color:#337ab7;
+                                }
+                                #video-upload-submit{
+                                    width: 100%;
+                                    padding-left: 3%;
+                                }
+                                #video-upload-link-submit{
+                                     float: left;
+                                    border-radius: 5px;
+                                    background-color:#337ab7;
+                                    color:white;
+                                }
+                                #video-upload-link-input{
+                                    display: inline;
+                                    margin-left: 10%;
+                                    margin-right: 10%;
+                                    border-radius: 5px;
+                                    border-color: #337ab7;
+                                }
+                            </style>
+
                             <!-- Tab profile details -->
                             <?php if(fre_share_role() || ae_user_role() == FREELANCER) { ?> 
                             <div class="tab-pane fade" id="tab_profile_details">

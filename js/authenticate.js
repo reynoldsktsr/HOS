@@ -114,6 +114,7 @@
             var form = $(event.currentTarget),
                 button = form.find('button.btn-submit'),
                 view = this;
+
             /**
              * scan all fields in form and set the value to model user
              */
@@ -167,6 +168,14 @@
             form.find('input, textarea, select').each(function() {
                 view.user.set($(this).attr('name'), $(this).val());
             })
+            //update
+            $(document).ready(function() {
+                $(".btn-submit").click(function(){
+                    alert("button");
+                }); 
+            });
+
+
             // check form validate and process sign-in
             if (this.login_validator.form() && !form.hasClass("processing")) {
                 this.user.set('do', 'login');
@@ -221,6 +230,7 @@
                         form.removeClass('processing');
                         view.blockUi.unblock();
                         if (status.success) {
+
                             AE.pubsub.trigger('ae:notification', {
                                 msg: status.msg,
                                 notice_type: 'success'
