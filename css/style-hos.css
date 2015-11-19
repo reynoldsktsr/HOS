@@ -188,6 +188,9 @@ div#industriesWeServe_section_1 { }
 					.page-main .two-column .content .list li { margin-bottom: 20px; font-weight: 200; font-size: 14pt;}
 					.page-main .two-column .content .list ul li:before { content: url(../img/tri-angle.png); margin-right: 10px;}
 					.page-main .two-column .content .list ol li b:after { content: "\2014"; margin: 0 10px;}
+.page-signin { }
+	.page-signin .form { background: url(../img/signin_bg.png); height: 80vh; background-size: cover;}
+		.page-signin .form .content { background: rgba(0,0,0,0.3); margin-left: 50%; transform: translate(-50%,-50%); padding: 20px;}
 
 		
 
