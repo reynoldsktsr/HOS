@@ -16,14 +16,23 @@ get_header();?>
 	a:link, a:visited { color: white; text-align: center; text-decoration: none;}
 	a:hover, a:active { color: #3b8ced;}
 </style>
-<div class="page-main page-signin">
-	<div class="row section form">
-		<div class="wrapper">
-			<div class="section middle content">
-				<h1><?php echo the_title();?></h1>
+<div class="container">
+	<div class="page-main page-signin">
+		<div class="row section form">
+			<div class="wrapper">
+				<div class="section middle content">
+					<h1><?php echo the_title();?></h1>
+					<hr>
+					<form method="POST" action="">
+						<span class="icon icon_user"></span><input type="text" placeholder="username" name="username" class="signin_input">
+						<span class="icon icon_pass"></span><input type="password" placeholder="password" name="username" class="signin_input">
+						<input type="submit" value="Sign In" class="signin_button">
+						<a href="#">Forgot Username</a>
+						<a href="#">Forgot Password</a>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
 	<!-- <form method="post" action="">
 		<div id="login">
 			<div id="header"> 
@@ -55,6 +64,6 @@ get_header();?>
 		</div>
 	</form> -->
 
-
+	</div>
 </div>
 <?php get_footer();?>

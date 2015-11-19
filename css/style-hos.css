@@ -189,8 +189,15 @@ div#industriesWeServe_section_1 { }
 					.page-main .two-column .content .list ul li:before { content: url(../img/tri-angle.png); margin-right: 10px;}
 					.page-main .two-column .content .list ol li b:after { content: "\2014"; margin: 0 10px;}
 .page-signin { }
-	.page-signin .form { background: url(../img/signin_bg.png); height: 80vh; background-size: cover;}
+	.page-signin .form { background: url(../img/signin_bg.jpg); height: 80vh; background-size: cover;}
 		.page-signin .form .content { background: rgba(0,0,0,0.3); margin-left: 50%; transform: translate(-50%,-50%); padding: 20px;}
+			.page-signin .form .content h1 { color: white; text-align: center;}
+			.page-signin .form .content hr { width: 400px; border-top: 1px solid #ffffff; margin: 20px auto;}
+			.page-signin .form .content form { }
+				.page-signin .form .content form input.signin_input { height: 35px; width:100%; display: block; background: none; border: none; border-bottom: 1px solid white;}
+				.icon { width: 35px; height: 35px; display: block;}
+				.icon_user {background: url(../img/icon_user.png); background-size: 35px 35px;}
+				.icon_pass {background: url(../img/icon_pass.png); background-size: 35px 35px;}
 
 		
 
