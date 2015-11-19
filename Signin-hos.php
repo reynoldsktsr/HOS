@@ -24,7 +24,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    color: blue;
+    color: #3b8ced;
 }
 
 </style>
@@ -44,7 +44,7 @@ HiredOn
     </span><br><br />
     
     <div id="signuppage1">
- <img src="<?php echo get_template_directory_uri();?>/mail64px.png" class="icon" /></div>
+ <img src="<?php echo get_template_directory_uri();?>/password64px.png" class="icon" /></div>
     <input type="password" placeholder="password" name="pass" class="input">
     <br><br />
     
