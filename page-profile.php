@@ -245,11 +245,15 @@
                             <?php if(fre_share_role() || ae_user_role() == FREELANCER) { ?> 
                             <div class="tab-pane fade" id="tab_profile_details">
                                 <div class="profile_details_wrapper">
-                            	    <p class="profile_details_text"> Professional Title</p> 
+                                    <div id="profile_details_left_column">
+                            	        <p class="profile_details_text"> Professional Title</p> 
+                                    </div>
                                     <input type="text" class="profile_details_input" size="30">
                                 </div>
                                 <div class="profile_details_wrapper">
-                                    <p class="profile_details_text"> Hourly Rate</p> 
+                                    <div id="profile_details_left_column">
+                                        <p class="profile_details_text"> Hourly Rate</p> 
+                                    </div>
                                     <input type="text" class="profile_details_input" size="30">
                                  </div>
                                 <div class="profile_details_wrapper">
@@ -313,14 +317,16 @@
                                     color:white;
                                 }
                                 #profile_details_aboutme{
-                                    margin-left: 21%;
+                                    margin-left: 32%;
                                     height: 200px;
-                                    width: 70%;
-                                     border-radius: 5px;
+                                    width: 58%;
+                                    border-radius: 5px;
                                     border-color: #337ab7;
+                                    border-left-color: #337ab7;
+                                    border-top-color: #337ab7;
                                 }
                                 #profile_details_text_aboutme{
-                                    margin-left: 24%;
+                                    margin-left: 32%;
                                 }
                                 #profile_details_wrapper_submit{
                                     margin-right: 8%
@@ -332,6 +338,10 @@
                                     border-color: #337ab7;
                                     width: 250px;
                                     height: 25px;
+                                }
+                                #profile_details_left_column{
+                                    text-align: left;
+                                    display: inline;
                                 }
                             </style>
                             <!--// END PROFILE DETAILS -->
