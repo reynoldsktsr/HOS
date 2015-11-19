@@ -6,7 +6,7 @@ get_header();?>
 div#signuppage{}
 div#header1{color:white; width:1024; text-align:center; background-color:transparent;  font-size:40px;}
 div#signuppage1 {width:35px; background-color:#3b8ced; vertical-align:middle; margin-left:40%; border-left: 2px solid #3b8ced; border-left-radius:20px; float:left;}
-div#login{background-image: url(<?php echo get_template_directory_uri();?>/signupbackground.png); background-repeat:no-repeat; background-position:center;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:700px;}
+div#login{background-image: url(<?php echo get_template_directory_uri();?>/paragliding.jpg); background-repeat:no-repeat; background-position:center;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:700px;}
 div#header2{font-size:25px;}
 
 .icon{width:35px;}
