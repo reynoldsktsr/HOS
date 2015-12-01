@@ -1,4 +1,4 @@
-<?php
+    <?php
 wp_reset_query();
 /**
  * The template for displaying the footer

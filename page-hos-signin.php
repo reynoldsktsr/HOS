@@ -5,7 +5,7 @@
  */
 get_header();?>
 <style>
-	div#signuppage{}
+	/*div#signuppage{}
 	div#signuppage1 { width:35px; color:white; font-size:25px; background-color:#3b8ced; vertical-align:middle; margin-left:41%; border-left: 2px solid #3b8ced; border-left-radius:20px; float:left;}
 	div#login{ background-image: url(<?php echo get_template_directory_uri();?>/img/signin_bg.png); background-repeat:no-repeat; background-position:center;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:400px;}
 	div#header{ color:white; text-align:center; font-size:50px;}
@@ -14,7 +14,7 @@ get_header();?>
 	.input{height:35px; width:200px;}
 	.submit{background-color:#3b8ced; font-size:16px; color:white; height:35px; width:200px; margin-left:42%;}
 	a:link, a:visited { color: white; text-align: center; text-decoration: none;}
-	a:hover, a:active { color: #3b8ced;}
+	a:hover, a:active { color: #3b8ced;}*/
 </style>
 <div class="container">
 	<div class="page-main page-signin">
@@ -23,10 +23,10 @@ get_header();?>
 				<div class="section middle content">
 					<h1><?php echo the_title();?></h1>
 					<hr>
-					<form method="POST" action="">
-						<span class="icon icon_user"></span><input type="text" placeholder="username" name="username" class="signin_input">
-						<span class="icon icon_pass"></span><input type="password" placeholder="password" name="username" class="signin_input">
-						<input type="submit" value="Sign In" class="signin_button">
+					<form role="form" class="auth-form signin_form" novalidate="novalidate" id="signin_form">
+						<div class="input_container"><span class="icon icon_user"></span><input type="text" placeholder="Enter username" name="user_login" class="form-control signin_input"></div>
+						<div class="input_container"><span class="icon icon_pass"></span><input type="password" placeholder="Password" name="user_login" class="form-control signin_input"></div>
+						<button type="submit" class="btn-submit btn-sumary btn-sub-create signin_button">Sign In</button>
 						<a href="#">Forgot Username</a>
 						<a href="#">Forgot Password</a>
 					</form>

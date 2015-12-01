@@ -188,18 +188,31 @@ div#industriesWeServe_section_1 { }
 					.page-main .two-column .content .list li { margin-bottom: 20px; font-weight: 200; font-size: 14pt;}
 					.page-main .two-column .content .list ul li:before { content: url(../img/tri-angle.png); margin-right: 10px;}
 					.page-main .two-column .content .list ol li b:after { content: "\2014"; margin: 0 10px;}
-.page-signin { }
-	.page-signin .form { background: url(../img/signin_bg.jpg); height: 80vh; background-size: cover;}
-		.page-signin .form .content { background: rgba(0,0,0,0.3); margin-left: 50%; transform: translate(-50%,-50%); padding: 20px;}
+.page-signin { min-height: 400px;}
+	.page-signin .form { background: url(../img/signin_bg.jpg); height: 80vh; background-size: cover; min-height: 400px}
+		.page-signin .form .content { background: rgba(0,0,0,0.3); margin-left: 50%; transform: translate(-50%,-50%); padding: 20px; width: 80%; max-width: 400px;}
 			.page-signin .form .content h1 { color: white; text-align: center;}
-			.page-signin .form .content hr { width: 400px; border-top: 1px solid #ffffff; margin: 20px auto;}
+			.page-signin .form .content hr { width: 50%; border-top: 1px solid #ffffff; margin: 20px auto;}
 			.page-signin .form .content form { }
-				.page-signin .form .content form input.signin_input { height: 35px; width:100%; display: block; background: none; border: none; border-bottom: 1px solid white;}
+				.page-signin .form .content form .input_container { width: 100%; height: 50px; display: block;}
+					.page-signin .form .content form .input_container .signin_input { height: 35px; width:90%; background: none; border: none; border-bottom: 1px solid white; float: left;}
+					.page-signin .form .content form .input_container .signin_input:active { border: none;}
+					.page-signin .form .content form .input_container span { width: 10%; float: left;}
+				.page-signin .form .content form .signin_button { width: 60%; height: 35px; margin: 20px auto; clear: both; display: block; background: rgba(255,255,255,.6); border: none; border-radius: 3px; color: #337ab7;}
+				.page-signin .form .content form .signin_button:hover { background: rgba(255,255,255,0.8);}
+				.page-signin .form .content form a { display: block;}
 				.icon { width: 35px; height: 35px; display: block;}
-				.icon_user {background: url(../img/icon_user.png); background-size: 35px 35px;}
-				.icon_pass {background: url(../img/icon_pass.png); background-size: 35px 35px;}
+				.icon_user {background: url(../img/icon_user.png); background-size: 35px 35px; background-repeat: no-repeat;}
+				.icon_pass {background: url(../img/icon_pass.png); background-size: 35px 35px; background-repeat: no-repeat;}
 
-		
+.account-page .container #tabs { margin-left: 7px; background: white; text-align: center;}
+	.account-page .container #tabs input { display: none;}
+	.account-page .container #tabs label { display: inline-block; margin: 0 0 -1px; padding: 10px 25px; font-weight: 400; text-align: center; color: #6d6d6d; border: 1px solid transparent;}
+	.account-page .container #tabs label:before { font-family: fontawesome; font-weight: normal; margin-right: 10px;}
+	.account-page .container #tabs label:hover { color: #3b8ced; cursor: pointer;}
+	.account-page .container #tabs input:checked + label { color: #3b8ced; border: 1px solid #3b8ced; border-top: 2px solid #3b8ced; border-bottom: 1px solid #3b8ced;}
+.account-page .container .account_container { max-width: 80%; height: auto; margin-left: 10%; border: 1px solid #3b8ced;}
+	.account-page .container .account_container h1 { margin: 0; padding: 20px 0 20px 20px;}
 
 .centered { margin: 0 auto; text-align: center;}
 .middle { height: auto; margin-top: 50vh; transform:translateY(-50%); position: absolute;}
