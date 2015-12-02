@@ -10,23 +10,26 @@ get_header();?>
 				<div class="centered middle content">
 					<h1>Connecting People with Jobs</h1>
 					<hr>
-					<p class="subheader">Here is a sample blurb</p>
+					<p class="subheader">By Modernizing Staffing</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="row section about">
 			<div class="col-xs-12 content">
-				We offer flexible staffing solutions<br>
-				We should add more things to say here<br>
-				This is now the third line of text we<br>
-				can put here<br>
-				End.<br>
+				<span>Most</span> traditional staffing companies rely heavily on the abilities of the recruiter and their recommendations to provide candidates.<br>
+				<span>A</span> traditional staffing company is only as good as their recruiters.<br>
+				<span>So</span> what happens when your recruiter leaves or isn't very good in the first place?<br>
+				<span>At</span> Hired On, we focus more on improving technology and processes to help identify and deliver candidates.<br>
+				<span>We</span> utilize our own proprietary algorithm to match you with highly skilled candidates and deliver candidates to you digitally so you can make a decision more accurately and quickly.
 			</div>
 		</div>
 
 		<div class="row section highlights">
 			<div class="col-xs-12 centered content">
+				<p style="font-weight:200;font-size:26pt;">
+					
+				</p>
 				<div class="col-xs-12 col-sm-4 centered">
 					<h2>Healthcare Staffing</h2>
 					<img src="<?php echo get_template_directory_uri();?>/img/healthcareIcon.jpg">

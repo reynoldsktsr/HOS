@@ -173,8 +173,10 @@ div#industriesWeServe_section_1 { }
 			.page-main .poster .content h1 { color: white;}
 			.page-main .poster .content hr { width: 400px; border-top: 1px solid #fff; margin: 20px auto;}
 			.page-main .poster .content .subheader { color: white; font-weight: 200;}
-	.page-main .about { font-size: 48px;}
+	.page-main .about { font-size: 36px;}
 		.page-main .about .content { font-weight: 100; padding: 30px 15px;}
+			.page-main .about .content br { margin-bottom: 5px;}
+			.page-main .about .content span { font-weight: 200;}
 	.page-main .highlights { }
 		.page-main .highlights .content { }
 			.page-main .highlights .content h2 { font-size: 20pt; font-weight: 300;}
