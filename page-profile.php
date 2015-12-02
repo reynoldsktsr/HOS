@@ -188,58 +188,6 @@
 
 							<!-- START PROFILE DETAILS -->
 							<div class="tab-pane fade" id="tab_profile_details">
-								<style>
-									.profile_details_input{
-										display:inline;
-										width: 250px;
-										height: 25px;
-										margin-left: 10%;
-										margin-right: 10%;
-										border-radius: 5px;
-										border-color: #337ab7;
-									}
-									.profile_details_text{
-										display: inline;
-										width:20%;
-									}
-									.profile_details_wrapper{
-										text-align: right;
-										margin-bottom:15px;
-										display:block;
-									}
-									#profile_details_submit{
-										border-radius: 5px;
-										background-color:#337ab7;
-										color:white;
-									}
-									#profile_details_aboutme{
-										margin-left: 32%;
-										height: 200px;
-										width: 58%;
-										border-radius: 5px;
-										border-color: #337ab7;
-										border-left-color: #337ab7;
-										border-top-color: #337ab7;
-									}
-									#profile_details_text_aboutme{
-										margin-left: 32%;
-									}
-									#profile_details_wrapper_submit{
-										margin-right: 8%
-									}
-									.profile_details_dropdown{
-										margin-left: 10%;
-										margin-right: 10%;
-										border-radius: 5px;
-										border-color: #337ab7;
-										width: 250px;
-										height: 25px;
-									}
-									#profile_details_left_column{
-										text-align: left;
-										display: inline;
-									}
-								</style>
 
 								<form id="profile_form">
 									<div class="form-group">
@@ -252,93 +200,59 @@
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('Hourly Rate', ET_DOMAIN) ?></label>
-											<input type="text" class="form-control" id="hourly_rate" name="hourly_rate" value="<?php echo $user_data->hourly_rate ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>">
+											<input type="text" class="form-control" id="hourly_rate" name="hourly_rate" value="<?php echo $user_data->hourly_rate ?>" placeholder="<?php _e('Enter Your Current Hourly Rate', ET_DOMAIN) ?>">
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('Skills', ET_DOMAIN) ?></label>
-											<input type="text" class="form-control" id="skill" name="skill" value="<?php echo $user_data->skill ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>">
+											<select name="skill" id="skill" class="form-control">
+												<option value="java">JAVA</option>
+												<option value="c++">C++</option>
+												<option value="python">Python</option>
+												<option value="php">PHP</option>
+											</select>
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('Category', ET_DOMAIN) ?></label>
-											<input type="text" class="form-control" id="category" name="category" value="<?php echo $user_data->category ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>">
+											<select name="category" id="category" class="form-control">
+												<option value="java">JAVA</option>
+												<option value="c++">C++</option>
+												<option value="python">Python</option>
+												<option value="php">PHP</option>
+											</select>
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('Country', ET_DOMAIN) ?></label>
-											<input type="text" class="form-control" id="country" name="country" value="<?php echo $user_data->country ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>">
+											<input type="text" class="form-control" id="country" name="country" value="<?php echo $user_data->country ?>" placeholder="<?php _e('Enter Your Country', ET_DOMAIN) ?>">
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('Years Experience', ET_DOMAIN) ?></label>
-											<input type="text" class="form-control" id="years_experience" name="years_experience" value="<?php echo $user_data->years_experience ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>">
+											<input type="text" class="form-control" id="years_experience" name="years_experience" value="<?php echo $user_data->years_experience ?>" placeholder="<?php _e('Enter Your Number of Years Experience', ET_DOMAIN) ?>">
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('About Me', ET_DOMAIN) ?></label>
-											<textarea type="textarea" class="form-control" id="about_me" name="about_me" value="<?php echo $user_data->about_me ?>" placeholder="<?php _e('Enter Your Title', ET_DOMAIN) ?>"></textarea>
+											<textarea type="textarea" class="form-control" id="about_me" name="about_me" value="<?php echo $user_data->about_me ?>" placeholder="<?php _e('Write Something About Yourself', ET_DOMAIN) ?>"></textarea>
 										</div>
 									</div>
 									<div class="clearfix"></div>
+									<div class="form-group">
+										<input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
+									</div>
 								</form>
-
-								<div class="profile_details_wrapper">
-									<div id="profile_details_left_column">
-										<p class="profile_details_text"> Professional Title</p> 
-									</div>
-									<input type="text" class="profile_details_input" size="30">
-								</div>
-								<div class="profile_details_wrapper">
-									<div id="profile_details_left_column">
-										<p class="profile_details_text"> Hourly Rate</p> 
-									</div>
-									<input type="text" class="profile_details_input" size="30">
-								 </div>
-								<div class="profile_details_wrapper">
-									<p class="profile_details_text"> Skills</p> 
-									<select name="cars" class= "profile_details_dropdown">
-										<option value="java">JAVA</option>
-										<option value="c++">C++</option>
-										<option value="python">Python</option>
-										<option value="php">PHP</option>
-									</select>
-								 </div>
-								<div class="profile_details_wrapper">
-									<p class="profile_details_text"> Catagory</p> 
-									<select name="cars" class= "profile_details_dropdown">
-										<option value="op1">Option 1</option>
-										<option value="op2">Option 2</option>
-										<option value="op3">Option 3</option>
-										<option value="op4">Option 4</option>
-									</select>
-								 </div>
-								<div class="profile_details_wrapper">
-									<p class="profile_details_text"> Country</p> 
-									<input type="text" class="profile_details_input" size="30">
-								 </div>
-								<div class="profile_details_wrapper">
-									<p class="profile_details_text"> Years Experience</p> 
-									<input type="text" class="profile_details_input" size="30">
-								 </div>
-								 
-								<p class="profile_details_text" id="profile_details_text_aboutme"> About Me</p>  
-								 <input type="text" id="profile_details_aboutme">
-								 <br><br>
-
-								<div class="profile_details_wrapper" id="profile_details_wrapper_submit">  
-									<input type="submit" value="Save Changes" id="profile_details_submit">
-								 </div>
 							</div>
 							<!-- END PROFILE DETAILS -->
 
@@ -410,7 +324,7 @@
 									</div>
 									<div id="video-upload-text-example-video">
 										<p>example video</p>
-										<iframe width="200" height="200" src="https://www.youtube.com/embed/phyU2BThK4Q" frameborder="0" allowfullscreen></iframe>
+										<iframe width="200" height="200" src="<?php echo $user_data->video_link ?>" frameborder="0" allowfullscreen></iframe>
 									</div>
 								 </div>
 								 <div id="video-upload-submit">
@@ -418,6 +332,18 @@
 										<input type="text" id="video-upload-link-input" size="30">
 										 <input type="submit" value="Save Link" id="video-upload-link-submit">
 								 </div>
+								 <form>
+									<div class="form-group">
+										<div class="form-group-control">
+											<label><?php _e('Link to Your Video', ET_DOMAIN) ?></label>
+											<input type="text" class="form-control" id="video_link" name="video_link" value="<?php echo $user_data->video_link ?>" placeholder="<?php _e('Enter Your Link to Video', ET_DOMAIN) ?>">
+										</div>
+									</div>
+									<div class="clearfix"></div>
+									<div class="form-group">
+										<input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
+									</div>
+								 </form>
 							</div>
 							<!-- END VIDEO UPLOAD -->
 							
