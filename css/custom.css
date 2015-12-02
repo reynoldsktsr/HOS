@@ -456,8 +456,8 @@ select {
 	border-top: 4px solid #2c3d4f;
 }
 #header-wrapper.not-page-home .login-form-header-wrapper a:hover{
-	color:#e74c3c;
-	border-color:#e74c3c !important;
+	color:#00afff;
+	border-color:#00afff !important;
 }
 
 .menu-fullscreen, .search-fullscreen, .notification-fullscreen{
