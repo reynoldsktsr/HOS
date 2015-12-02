@@ -46,6 +46,31 @@
 
 	get_header();
 ?>
+<?php
+    $current_user = wp_get_current_user();
+    $id = $current_user->ID;
+
+    //edit db
+    if(isset($_GET['video_link'])) {
+        $video_link = $_GET['video_link'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET video_link ='$video_link' WHERE id='$id' ");
+    }
+    // $current_url = $_SERVER['REQUEST_URI'];
+    // $new_url = strstr($current_url, '?', true);
+    // header($new_url);
+
+
+    $temp = $wpdb->get_row( " SELECT * FROM wp_hos_users WHERE id =  '$id' ");
+    $video_link_db = $temp -> video_link;
+    // var_dump($temp);
+    //echo "$video_link_db";
+    // if(!isset($video_link_db)){
+    //     $video_link_db = "";
+    // }
+?>
+
 <section class="section-wrapper <?php if(ae_user_role() == FREELANCER) echo 'freelancer'; ?>">
 	<div class="number-profile-wrapper">
     	<div class="container">
@@ -85,6 +110,11 @@
                             <li>
                                 <a href="#tab_edit_account" role="tab" data-toggle="tab">
                                     <?php _e('Edit Account', ET_DOMAIN) ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab_test" role="tab" data-toggle="tab">
+                                    <?php _e('test', ET_DOMAIN) ?>
                                 </a>
                             </li>
                         </ul>
@@ -193,10 +223,43 @@
                                  </div>
                                  <div id="video-upload-submit">
                                         <p id="video-upload-p"> Link to the Video: </p>
-                                        <input type="text" id="video-upload-link-input" size="30">
-                                         <input type="submit" value="Save Link" id="video-upload-link-submit">
+                                        <input type="text" id="video-upload-link-input" value= "<?php echo $video_link_db ?>"size="30">
+                                        <input type="submit" value="Save Link" id="video-upload-link-submit" onclick="send_link()">
                                  </div>
                         </div>
+                        <script>
+                        function send_link(){
+                            //var tab = "#tab_video_upload";
+                            var link = document.getElementById("video-upload-link-input").value;
+                            if(window.location.href.indexOf('?') === -1){
+                                window.location.href = window.location.href + "?video_link=" + link;
+                            }
+                            else{
+                                window.location.href = window.location.href + "&video_link=" + link;
+                            }
+                            
+                            
+                        }
+                        // function send_data(){
+                        //     var link = document.getElementById("video-upload-link-input").value;
+                        //     var parameter = "text=" + link;
+                        //     var http = new XMLHttpRequest();
+                        //     var url = "../wp-content/themes/HOS/video_link_db.php";  
+                        //     http.open("GET", url, true);
+                        //     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        //     //http.setRequestHeader("Content-length", parameter.length);
+                        //     //http.setRequestHeader("Connection", "close");
+
+                        //     http.onreadystatechange = function() {//Call a function when the state changes.
+                        //     }
+                        //     http.send(parameter);
+                        //    // alert(parameter);
+                        
+    
+                        </script>
+                        
+                
+
                             <style>
                             #tab_video_upload-wrapper{
                                 display:block;
@@ -240,7 +303,69 @@
                                     display: inline;
                                 }
                             </style>
+                            
+                             <div class="tab-pane fade" id="tab_test">
+                                <input type="submit" value="Save Link" id="video-upload-link-submit" onclick="send_data()">
+                                 <?php
+                                    // $text = $_POST['text'];
+                                    // $current_user = wp_get_current_user();
+                                    // $id = $current_user->ID;
+                                    // $wpdb->query("INSERT INTO wp_users (ID, user_url) VALUES ('$id', 'text')"  );
+                                   
+                                    // $user = 'root';
+                                    // $password = 'root';
+                                    // $db = 'user_info';
+                                    // $host = 'localhost';
+                                    // $port = 8889;
 
+                                    // $link = mysqli_init();
+                                    // $success = mysqli_real_connect(
+                                    //    $link, 
+                                    //    $host, 
+                                    //    $user, 
+                                    //    $password, 
+                                    //    $db,
+                                    //    $port
+                                    // );
+                                    // if($success){
+                                    //     echo "connect success";
+                                    // }
+                                    //  $current_user = wp_get_current_user();
+                                    // echo 'User ID: ' . $current_user->ID . '<br />';
+                                    
+                                    // //$wpdb->query("INSERT INTO wp_hos_users (ID, user_url) VALUES ('53','wwww.c.com')"  );
+                                    // $wpdb->query("UPDATE wp_hos_users SET user_url ='www.c' WHERE id='52' ");
+                                    //  echo "connect success";
+                                    //  $query = "INSERT INTO info (id, link) VALUES ('1', 'Doe')";
+                                    //  $result = mysqli_query($success,$query);
+                                    
+                                    //  if(mysqli_query($success,$query)){
+                                    //     echo "Record updated successfully";
+                                    // } 
+                                    // else{
+                                    //     echo("Error description: " . mysqli_error($success));
+                                    // }
+                                // $user = 'root';
+                                // $password = 'root';
+                                // $db = 'user_info';
+                                // $host = 'localhost';
+                                // $port = 8889;
+
+                                // $link = mysql_connect(
+                                //    "$host:$port", 
+                                //    $user, 
+                                //    $password
+                                // );
+                                // $db_selected = mysql_select_db(
+                                //    $db, 
+                                //    $link
+                                // );
+                                // $query = "INSERT INTO info (id, link) VALUES ('1', 'Doe')";
+                                // $result = mysqli_query($link,$query) or die(mysqli_error($link));
+                                     
+                                    
+                                ?>
+                             </div>
                             <!-- Tab profile details -->
                             <?php if(fre_share_role() || ae_user_role() == FREELANCER) { ?> 
                             <div class="tab-pane fade" id="tab_profile_details">
@@ -347,6 +472,7 @@
                             <!--// END PROFILE DETAILS -->
                             <!-- tab project details -->
                             <div class="tab-pane fade" id="tab_project_details">
+
                                 <?php 
                                 // list all freelancer current bid
                                 if(fre_share_role() || $user_role == FREELANCER){ ?>
