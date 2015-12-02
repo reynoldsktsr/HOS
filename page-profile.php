@@ -100,20 +100,10 @@
                 	<div class="tab-content-profile">
                         <!-- Tab panes -->
                         <div class="tab-content block-profiles responsive">
-                            <!-- Tab account details -->
+                            <!-- START ACCOUNT DETAILS -->
                             <div class="tab-pane fade in active" id="tab_account_details">
                                 <div class="row">
-                                    <div class="avatar-profile-page col-md-3 col-xs-12" id="user_avatar_container">
-                                        <span class="img-avatar image" id="user_avatar_thumbnail">
-                                            <?php echo get_avatar($user_data->ID, 125) ?>
-                                        </span>
-                                        <a href="#" id="user_avatar_browse_button">
-                                            <?php _e('Change', ET_DOMAIN) ?>
-                                        </a>
-                                        <span class="et_ajaxnonce hidden" id="<?php echo de_create_nonce( 'user_avatar_et_uploader' ); ?>">
-                                        </span>
-                                    </div>
-                                    <div class="info-profile-page col-md-9 col-xs-12">
+                                    <div class="info-profile-page col-md-12 col-xs-12">
                                         <form class="form-info-basic" id="account_form">
                                             <div class="form-group">
                                             	<div class="form-group-control">
@@ -124,38 +114,25 @@
                                             <div class="clearfix"></div>
                                             <div class="form-group">
                                             	<div class="form-group-control">
-                                                	<div class="form-group-control">
-                                                        <label><?php _e('Location', ET_DOMAIN) ?></label>
-                                                        <input type="text" class="form-control" id="location" name="location" value="<?php echo $user_data->location ?>" placeholder="<?php _e('Enter location', ET_DOMAIN) ?>">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <div class="form-group">
-                                            	<div class="form-group-control">
                                                     <label><?php _e('Email Address', ET_DOMAIN) ?></label>
                                                     <input type="email" class="form-control" id="user_email" name="user_email" value="<?php echo $user_data->user_email ?>" placeholder="<?php _e('Enter email', ET_DOMAIN) ?>">
                                                 </div>
                                             </div>
                                             <div class="clearfix"></div>
-                                            <?php if(ae_get_option('use_escrow', false)) { ?>
                                             <div class="form-group">
-                                                <div class="form-group-control">
-                                                    <label><?php _e('Your Paypal Account', ET_DOMAIN) ?></label>
-                                                    <input type="email" class="form-control" id="paypal" name="paypal" value="<?php echo get_user_meta( $user_ID, 'paypal', true ); ?>" placeholder="<?php _e('Enter your paypal email', ET_DOMAIN) ?>">
+                                            	<div class="form-group-control">
+                                                    <label><?php _e('Username', ET_DOMAIN) ?></label>
+                                                    <input type="email" class="form-control" id="user_login" name="user_login" value="<?php echo $user_data->user_login ?>" placeholder="<?php _e('Enter Username', ET_DOMAIN) ?>">
                                                 </div>
                                             </div>
                                             <div class="clearfix"></div>
-                                            <?php } ?>
                                             <div class="form-group">
-                                                <div class="form-group-control">
-                                                    <label>
-                                                        <?php _e('Your Credit number: ', ET_DOMAIN);  ?>
-                                                        <?php echo get_user_credit_number( $user_ID ) ; ?>
-                                                    </label>                                                   
+                                            	<div class="form-group-control">
+                                                    <label><?php _e('Phone Number', ET_DOMAIN) ?></label>
+                                                    <input type="email" class="form-control" id="user_phone" name="user_phone" value="<?php echo $user_data->phone_number ?>" placeholder="<?php _e('Enter Phone Number', ET_DOMAIN) ?>">
                                                 </div>
                                             </div>
-                                            <div class="clearfix"></div>                                            
+                                            <div class="clearfix"></div>
                                             <div class="form-group">
                                                 <input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
                                             </div>
@@ -163,44 +140,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--// END ACCOUNT DETAILS -->
+                            <!-- END ACCOUNT DETAILS -->
+
+                            <!-- START VIDEO UPLOAD -->
                             <div class="tab-pane fade" id="tab_video_upload">
-                                <div id="tab_video_upload-wrapper">
-                                    <div id="video-upload-text">
-                                        <h3 >Why?</h3>
-                                        <div id="video-upload-text-tab">
-                                            <p>Our clients value employess videos and we hope that you choose to upload one of your own.
-                                                Up-loading a video wiill give companies a better idea of why you are an amazing fit.</p>
-                                            <br>
-                                            <p>We will only share your video link to our clients.</p>
-                                            <br>
-                                            <p class="video-upload-colored-text">Make sure to Keep your video settings set up so that only those with the link can see it.</p>
-                                            <br>
-                                        </div>
-                                        <h3 >Resources and links:</h3>
-                                        <br>
-                                        <div id="video-upload-text-tab">
-                                            <p>Youtube and other sites provide a variaty of resources that will make this an easy process.</p>
-                                            <br>
-                                            <p> Please check out the links below to get started!</p>
-                                            <p class="video-upload-colored-text"> link http://stackoverflow.com/questions/11963780/displayinline-not-working</p>
-                                        </div>
-                                    </div>
-                                    <div id="video-upload-text-example-video">
-                                        <p>example video</p>
-                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/phyU2BThK4Q" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                 </div>
-                                 <div id="video-upload-submit">
-                                        <p id="video-upload-p"> Link to the Video: </p>
-                                        <input type="text" id="video-upload-link-input" size="30">
-                                         <input type="submit" value="Save Link" id="video-upload-link-submit">
-                                 </div>
-                        </div>
-                            <style>
-                            #tab_video_upload-wrapper{
-                                display:block;
-                            }
+	                            <style>
+	                            #tab_video_upload-wrapper{
+	                                display:block;
+	                            }
                                 #video-upload-text{
                                     float: left;
                                     width:60%;
@@ -239,11 +186,95 @@
                                 #video-upload-p{
                                     display: inline;
                                 }
-                            </style>
+                            	</style>
+                                <div id="tab_video_upload-wrapper">
+                                    <div id="video-upload-text">
+                                        <h3 >Why?</h3>
+                                        <div id="video-upload-text-tab">
+                                            <p>Our clients value employess videos and we hope that you choose to upload one of your own.
+                                                Up-loading a video wiill give companies a better idea of why you are an amazing fit.</p>
+                                            <br>
+                                            <p>We will only share your video link to our clients.</p>
+                                            <br>
+                                            <p class="video-upload-colored-text">Make sure to Keep your video settings set up so that only those with the link can see it.</p>
+                                            <br>
+                                        </div>
+                                        <h3 >Resources and links:</h3>
+                                        <br>
+                                        <div id="video-upload-text-tab">
+                                            <p>Youtube and other sites provide a variaty of resources that will make this an easy process.</p>
+                                            <br>
+                                            <p> Please check out the links below to get started!</p>
+                                            <p class="video-upload-colored-text"> link http://stackoverflow.com/questions/11963780/displayinline-not-working</p>
+                                        </div>
+                                    </div>
+                                    <div id="video-upload-text-example-video">
+                                        <p>example video</p>
+                                        <iframe width="200" height="200" src="https://www.youtube.com/embed/phyU2BThK4Q" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                 </div>
+                                 <div id="video-upload-submit">
+                                        <p id="video-upload-p"> Link to the Video: </p>
+                                        <input type="text" id="video-upload-link-input" size="30">
+                                         <input type="submit" value="Save Link" id="video-upload-link-submit">
+                                 </div>
+                        	</div>
+                            <!-- END VIDEO UPLOAD -->
 
-                            <!-- Tab profile details -->
-                            <?php if(fre_share_role() || ae_user_role() == FREELANCER) { ?> 
+                            <!-- START PROFILE DETAILS -->
                             <div class="tab-pane fade" id="tab_profile_details">
+	                            <style>
+	                                .profile_details_input{
+	                                    display:inline;
+	                                    width: 250px;
+	                                    height: 25px;
+	                                    margin-left: 10%;
+	                                    margin-right: 10%;
+	                                    border-radius: 5px;
+	                                    border-color: #337ab7;
+	                                }
+	                                .profile_details_text{
+	                                    display: inline;
+	                                    width:20%;
+	                                }
+	                                .profile_details_wrapper{
+	                                    text-align: right;
+	                                    margin-bottom:15px;
+	                                    display:block;
+	                                }
+	                                #profile_details_submit{
+	                                    border-radius: 5px;
+	                                    background-color:#337ab7;
+	                                    color:white;
+	                                }
+	                                #profile_details_aboutme{
+	                                    margin-left: 32%;
+	                                    height: 200px;
+	                                    width: 58%;
+	                                    border-radius: 5px;
+	                                    border-color: #337ab7;
+	                                    border-left-color: #337ab7;
+	                                    border-top-color: #337ab7;
+	                                }
+	                                #profile_details_text_aboutme{
+	                                    margin-left: 32%;
+	                                }
+	                                #profile_details_wrapper_submit{
+	                                    margin-right: 8%
+	                                }
+	                                .profile_details_dropdown{
+	                                    margin-left: 10%;
+	                                    margin-right: 10%;
+	                                    border-radius: 5px;
+	                                    border-color: #337ab7;
+	                                    width: 250px;
+	                                    height: 25px;
+	                                }
+	                                #profile_details_left_column{
+	                                    text-align: left;
+	                                    display: inline;
+	                                }
+	                            </style>
                                 <div class="profile_details_wrapper">
                                     <div id="profile_details_left_column">
                             	        <p class="profile_details_text"> Professional Title</p> 
@@ -291,60 +322,7 @@
                                     <input type="submit" value="Save Changes" id="profile_details_submit">
                                  </div>
                             </div>
-                            <?php } ?>
-                            <style>
-                                .profile_details_input{
-                                    display:inline;
-                                    width: 250px;
-                                    height: 25px;
-                                    margin-left: 10%;
-                                    margin-right: 10%;
-                                    border-radius: 5px;
-                                    border-color: #337ab7;
-                                }
-                                .profile_details_text{
-                                    display: inline;
-                                    width:20%;
-                                }
-                                .profile_details_wrapper{
-                                    text-align: right;
-                                    margin-bottom:15px;
-                                    display:block;
-                                }
-                                #profile_details_submit{
-                                    border-radius: 5px;
-                                    background-color:#337ab7;
-                                    color:white;
-                                }
-                                #profile_details_aboutme{
-                                    margin-left: 32%;
-                                    height: 200px;
-                                    width: 58%;
-                                    border-radius: 5px;
-                                    border-color: #337ab7;
-                                    border-left-color: #337ab7;
-                                    border-top-color: #337ab7;
-                                }
-                                #profile_details_text_aboutme{
-                                    margin-left: 32%;
-                                }
-                                #profile_details_wrapper_submit{
-                                    margin-right: 8%
-                                }
-                                .profile_details_dropdown{
-                                    margin-left: 10%;
-                                    margin-right: 10%;
-                                    border-radius: 5px;
-                                    border-color: #337ab7;
-                                    width: 250px;
-                                    height: 25px;
-                                }
-                                #profile_details_left_column{
-                                    text-align: left;
-                                    display: inline;
-                                }
-                            </style>
-                            <!--// END PROFILE DETAILS -->
+                            <!-- END PROFILE DETAILS -->
                             <!-- tab project details -->
                             <div class="tab-pane fade" id="tab_project_details">
                                 <?php 
