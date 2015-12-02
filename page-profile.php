@@ -46,6 +46,59 @@
 
 	get_header();
 ?>
+<?php
+if(isset($_GET['video_link'])) {
+        $video_link = $_GET['video_link'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET video_link ='$video_link' WHERE id='$id' ");
+   }
+   if(isset($_GET['professional_title'])) {
+        $professional_title = $_GET['professional_title'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET professional_title ='$professional_title' WHERE id='$id' ");
+   }
+   if(isset($_GET['hourly_rate'])) {
+        $hourly_rate = $_GET['hourly_rate'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET hourly_rate ='$hourly_rate' WHERE id='$id' ");
+   }
+    if(isset($_GET['country'])) {
+        $country = $_GET['country'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET country ='$country' WHERE id='$id' ");
+   }
+   if(isset($_GET['category'])) {
+        $category = $_GET['category'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET category ='$category' WHERE id='$id' ");
+   }
+   if(isset($_GET['skill'])) {
+        $skill = $_GET['skill'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET skill ='$skill' WHERE id='$id' ");
+   }
+   if(isset($_GET['years_experience'])) {
+        $years_experience = $_GET['years_experience'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET years_experience ='$years_experience' WHERE id='$id' ");
+   }
+   if(isset($_GET['about_me'])) {
+        $about_me = $_GET['about_me'];
+        $current_user = wp_get_current_user();
+        $id = $current_user->ID;
+        $wpdb->query("UPDATE wp_hos_users SET about_me ='$about_me' WHERE id='$id' ");
+   }
+
+?>
+
+
 <section class="section-wrapper <?php if(ae_user_role() == FREELANCER) echo 'freelancer'; ?>">
 	<div class="number-profile-wrapper">
 		<div class="container">
@@ -245,12 +298,12 @@
 									<div class="form-group">
 										<div class="form-group-control">
 											<label><?php _e('About Me', ET_DOMAIN) ?></label>
-											<textarea type="textarea" class="form-control" id="about_me" name="about_me" value="<?php echo $user_data->about_me ?>" placeholder="<?php _e('Write Something About Yourself', ET_DOMAIN) ?>"></textarea>
+											<textarea type="textarea" class="form-control" id="about_me" name="about_me"  placeholder="<?php _e('Write Something About Yourself', ET_DOMAIN) ?>"><?php echo $user_data->about_me ?></textarea>
 										</div>
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
-										<input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
+										<input type="submit" class="btn-submit btn-sumary" onclick="send_link()" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
 									</div>
 								</form>
 							</div>
@@ -327,11 +380,7 @@
 										<iframe width="200" height="200" src="<?php echo $user_data->video_link ?>" frameborder="0" allowfullscreen></iframe>
 									</div>
 								 </div>
-								 <div id="video-upload-submit">
-										<p id="video-upload-p"> Link to the Video: </p>
-										<input type="text" id="video-upload-link-input" size="30">
-										 <input type="submit" value="Save Link" id="video-upload-link-submit">
-								 </div>
+								 
 								 <form>
 									<div class="form-group">
 										<div class="form-group-control">
@@ -341,11 +390,84 @@
 									</div>
 									<div class="clearfix"></div>
 									<div class="form-group">
-										<input type="submit" class="btn-submit btn-sumary" name="" value="<?php _e('Save Details', ET_DOMAIN) ?>">
+										<input type="submit" class="btn-submit btn-sumary" name="" onclick="send_link()" value="<?php _e('Save Details', ET_DOMAIN) ?>">
 									</div>
 								 </form>
 							</div>
 							<!-- END VIDEO UPLOAD -->
+
+                            <script>
+                            function send_link(){
+                               
+                                var professional_title = document.getElementById("professional_title").value;
+                                var hourly_rate = document.getElementById("hourly_rate").value;
+                                var country = document.getElementById("country").value;
+                                var category = document.getElementById("category").value;
+                                var skill = document.getElementById("skill").value;
+                                var years_experience = document.getElementById("years_experience").value;
+                                var about_me = document.getElementById("about_me").value;
+                                var video_link = document.getElementById("video_link").value;
+
+                                var link = "";
+                                if(professional_title != "" && link.indexOf('?') === -1){
+                                    link += "?professional_title=" + professional_title;
+                                }
+                                else if(professional_title != "" && link.indexOf('?') != -1){
+                                    link += "&professional_title=" + professional_title;
+                                }
+                                if(hourly_rate != "" && link.indexOf('?') === -1){
+                                    link += "?hourly_rate=" + hourly_rate;
+                                }
+                                if(hourly_rate != "" && link.indexOf('?') != -1){
+                                    link += "&hourly_rate=" + hourly_rate;
+                                }
+                                if(country != "" && link.indexOf('?') === -1){
+                                    link += "?country=" + country;
+                                }
+                                if(country != "" && link.indexOf('?') != -1){
+                                    link += "&country=" + country;
+                                }
+                                if(category != "" && link.indexOf('?') === -1){
+                                    link += "?category=" + category;
+                                }
+                                if(category != "" && link.indexOf('?') != -1){
+                                    link += "&category=" + category;
+                                }
+                                if(skill != "" && link.indexOf('?') === -1){
+                                    link += "?skill=" + skill;
+                                }
+                                if(skill != "" && link.indexOf('?') != -1){
+                                    link += "&skill=" + skill;
+                                }
+                                if(years_experience != "" && link.indexOf('?') === -1){
+                                    link += "?years_experience=" + years_experience;
+                                }
+                                if(years_experience != "" && link.indexOf('?') != -1){
+                                    link += "&years_experience=" + years_experience;
+                                }
+                                if(about_me != "" && link.indexOf('?') === -1){
+                                    link += "?about_me=" + about_me;
+                                }
+                                if(about_me != "" && link.indexOf('?') != -1){
+                                    link += "&about_me=" + about_me;
+                                }
+
+                                if(video_link != "" && link.indexOf('?') === -1){
+                                    link += "?video_link=" + video_link;
+                                }
+                                if(video_link != "" && link.indexOf('?') != -1){
+                                    link += "&video_link=" + video_link;
+                                }
+
+                               
+                                window.location.href += link;
+                                
+
+                            }
+                            </script>
+
+
+
 							
 						</div>
 					</div>
