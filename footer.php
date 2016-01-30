@@ -212,5 +212,6 @@ wp_reset_query();
         iframe.style.height = evt.data + 'px';
     }
 </script>
+<script src="<?php echo get_template_directory_uri();?>/js/menu-listener.js"></script>
 
 </html>
