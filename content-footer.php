@@ -1,5 +1,5 @@
 <!-- BEGIN CUSTOM FOOTER -->
-<div class="row contactContainer">
+<!--<div class="row contactContainer">
 	<div class="col-md-4 footerColumn">
 		<div id="contactInfo">
 			<h3 class="contactHeader">Contact Us</h3>
@@ -43,13 +43,41 @@
 				<div>
 					<label for="message">Your Message</label>
 					<textarea form="contactForm"></textarea>
-					<!-- <input type="textarea" id="message" name="messageField"> -->
+					<input type="textarea" id="message" name="messageField">
 				</div>
 				<input type="submit">
 			</form>
 		</div>
 	</div>
+</div>-->
+<div class="row footerButtons">
+	<div id="footer-button-container">
+		<a href="/about-us">
+			<div class="footer-button">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_about_us.png">
+				<p>About Us</p>
+			</div>
+		</a>
+		<a href="/contact-us">
+			<div class="footer-button">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_contact_us.png">
+				<p>Contact Us</p>
+			</div>
+		</a>
+		<a href="/login">
+			<div class="footer-button">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/icon_login.png">
+				<p>Log In</p>
+			</div>
+		</a>
+	</div>
+	
+</div>
+<div class="row socialMedia">
+	<i class="fa fa-linkedin-square"></i>
+	<i class="fa fa-twitter-square"></i>
+	<i class="fa fa-facebook-square"></i>
 </div>
 <div class="row copyrightContainer" style="text-align: center;">
-	Copyright &#169 2015 Hired On 
+	&copy; <?php echo (date('Y'))?> Hired On Staffing | <a href="/privacy">Privacy Policy</a>
 </div>

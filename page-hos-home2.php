@@ -24,7 +24,7 @@ get_header();?>
 			</div>
 		</div>
 
-		<div class="row section highlights">
+		<!--<div class="row section highlights">
 			<div class="col-xs-12 centered content">
 				<p style="font-weight:200;font-size:26pt;">
 					
@@ -42,9 +42,9 @@ get_header();?>
 					<img src="<?php echo get_template_directory_uri();?>/img/professionalStaffing.jpg">
 				</div>
 			</div>
-		</div>
+		</div>-->
 
-		<div id="jobseekers" class="row section two-column">
+		<!--<div id="jobseekers" class="row section two-column">
 			<div class="col-xs-12 centered content image-left">
 				<h1>Job Seekers</h1>
 				<div class="col-xs-12 col-sm-6 image-half">
@@ -62,9 +62,9 @@ get_header();?>
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
-		<div id="employers" class="row section two-column image-right">
+		<!--<div id="employers" class="row section two-column image-right">
 			<div class="col-xs-12 centered content">
 				<h1>Employers</h1>
 				<div class="col-xs-12 col-sm-8 list">
@@ -81,7 +81,7 @@ get_header();?>
 					<img src="<?php echo get_template_directory_uri();?>/img/jobSeekersBG1.jpg">
 				</div>
 			</div>
-		</div>
+		</div>-->
 
 	</div>
 </div>
